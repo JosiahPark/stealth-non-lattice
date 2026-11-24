@@ -17,7 +17,8 @@ Layout: `StealthAudit.lean` (root, imports Mathlib only), `StealthAudit/Basic.le
 `dot`, `phase`, `amp`, `sqNorm`, `Survives`, `GapAtLeast`, `gapSq`, `stealthRadius`, `density`,
 `centerDensity`, `DistinctModPeriod`, `ind`, `oddSupp`, `IsBinary`, `charSum`, `HasStrength`,
 `IsHadamard`, `antipodalMotif`), then one file per item, `StealthAudit/<Name>.lean`. Every file under
-`StealthAudit/` is built automatically. CI (`.github/workflows/lean.yml`) runs `lake build` with
+`StealthAudit/` is built automatically. CI (`.github/workflows/lean.yml` at the repository root; this
+project is the folder `stealth-lean/` of the repository) runs `lake build` with
 Lean 4.35.0 + Mathlib v4.35.0, then `axiom_audit.py`.
 
 Conventions of the library. The marked period is `2ℤⁿ`. A motif is an indexed family

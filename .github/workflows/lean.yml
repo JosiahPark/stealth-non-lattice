@@ -1,8 +1,15 @@
 name: Lean verification
 
+# Builds and audits the Lean project in stealth-lean/ and refreshes its status files.
 on:
   push:
+    paths:
+      - "stealth-lean/**"
+      - ".github/workflows/lean.yml"
   pull_request:
+    paths:
+      - "stealth-lean/**"
+      - ".github/workflows/lean.yml"
   workflow_dispatch:
 
 concurrency:
@@ -16,41 +23,33 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 40
+    defaults:
+      run:
+        shell: bash
+        working-directory: stealth-lean
     steps:
       - uses: actions/checkout@v4
 
-      # Installs the pinned Lean toolchain and downloads the prebuilt Mathlib cache.
-      - uses: leanprover/lean-action@v1
-        id: setup
-        timeout-minutes: 12
-        continue-on-error: true
-        with:
-          build: false
-          use-mathlib-cache: true
+      # elan reads the pinned toolchain from stealth-lean/lean-toolchain on first use.
+      - name: Install elan
+        run: |
+          curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
 
       # The Mathlib cache download occasionally stalls near the end; retry it once.
-      - name: Retry Mathlib cache download
-        if: steps.setup.outcome != 'success'
-        timeout-minutes: 15
-        shell: bash
-        run: |
-          export PATH="$HOME/.elan/bin:$PATH"
-          lake exe cache get
+      - name: Download the prebuilt Mathlib cache
+        timeout-minutes: 25
+        run: lake exe cache get || lake exe cache get
 
-      # Build ourselves so the compiler output is saved for the status report.
+      # Keep the compiler output for the status report.
       - name: Build
-        shell: bash
         run: |
-          export PATH="$HOME/.elan/bin:$PATH"
           set -o pipefail
           if lake build 2>&1 | tee build.log; then echo 0 > build.exit; else echo 1 > build.exit; exit 1; fi
 
       - name: Axiom audit (fails on build errors, sorry, escape hatches or non-standard axioms)
         if: always()
-        shell: bash
-        run: |
-          export PATH="$HOME/.elan/bin:$PATH"
-          python3 axiom_audit.py
+        run: python3 axiom_audit.py
 
       - name: Publish status to the run summary
         if: always()
@@ -64,9 +63,9 @@ jobs:
         continue-on-error: true
         run: python3 tools/build_roadmap.py
 
-      # Commit status and roadmap page only when their content changed (the keys leave out the build time).
+      # Only on main. Commit status and roadmap page only when their content changed (the keys leave out the build time).
       - name: Commit status and roadmap page if changed
-        if: always() && github.event_name != 'pull_request'
+        if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           [ -f verification/STATUS.json ] || exit 0
           python3 - <<'PY'
@@ -80,7 +79,7 @@ jobs:
           if git diff --cached --quiet; then echo "Status and roadmap unchanged"; exit 0; fi
           git add verification/STATUS.md verification/STATUS.json docs/roadmap.html
           git -c user.name="lean-verify" -c user.email="lean-verify@users.noreply.github.com" commit -m "Update Lean verification status and roadmap page"
-          # main may have moved on during the build (e.g. a follow-up ROADMAP commit); rebase before pushing.
+          # main may have moved on during the build; rebase before pushing.
           for i in 1 2 3; do
             if git pull --rebase -q origin "${GITHUB_REF_NAME}" && git push; then exit 0; fi
             git rebase --abort 2>/dev/null || true

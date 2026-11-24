@@ -1,6 +1,10 @@
 # Stealth Hadamard configurations: Lean verification
 
-This repository holds a Lean 4 + Mathlib (v4.35.0) project, `StealthAudit`, that formalizes results of
+**[Interactive roadmap map](https://josiahpark.github.io/stealth-non-lattice/stealth-lean/docs/roadmap.html)** ·
+[roadmap](ROADMAP.md) · [verification status](verification/STATUS.md)
+
+This folder of [stealth-non-lattice](https://github.com/JosiahPark/stealth-non-lattice) holds a Lean 4 + Mathlib
+(v4.35.0) project, `StealthAudit`, that formalizes results of
 
 > J. Park, *Hadamard configurations and sharp cubic-period bounds for stealth in dimensions 10, 11, and 12*
 > (4 Nov 2026), included at [`paper/stealth_hadamard.pdf`](paper/stealth_hadamard.pdf).
@@ -14,7 +18,7 @@ at least `2n` points, with equality only for antipodal Hadamard arrays.
 
 Every theorem under `StealthAudit/` compiles with only Lean's three standard axioms (`propext`,
 `Classical.choice`, `Quot.sound`). [`verification/STATUS.md`](verification/STATUS.md) lists them and is
-rewritten after every build; at the initial commit it has 168 theorems in 18 files.
+rewritten by CI after every build on `main`; at the initial commit it has 168 theorems in 18 files.
 
 | Paper result | Status in Lean | Main Lean statements |
 |---|---|---|
@@ -48,7 +52,9 @@ consequences (E), local optimality (F), formal duality and numerical comparisons
 done. The next open items are A3 (general marked period, formula (3)), B2 (Proposition 3.1 as displayed) and
 D4–D9 (the equality case of Theorem 1.2).
 
-[`docs/roadmap.html`](docs/roadmap.html) draws the roadmap as an interactive map, in the style of
+[`docs/roadmap.html`](docs/roadmap.html) draws the roadmap as an interactive map
+([rendered page](https://josiahpark.github.io/stealth-non-lattice/stealth-lean/docs/roadmap.html), served by GitHub
+Pages from `main`), in the style of
 [steklov-lean](https://github.com/JosiahPark/steklov-lean) and
 [balian-low-asymptotics-hermitian-optimality](https://github.com/JosiahPark/balian-low-asymptotics-hermitian-optimality):
 sections as bands, one box per item, the paper's results as a spine on the right. CI refreshes the page's
@@ -67,11 +73,12 @@ live from `main`.
   non-standard axioms, escape hatches (`native_decide`, `axiom`, `unsafe`, heartbeat options, …), or a proof
   that is just one of its own hypotheses. It writes `verification/STATUS.md` and `verification/STATUS.json`.
 - `tools/build_roadmap.py`: refreshes the snapshot inside `docs/roadmap.html`.
-- `.github/workflows/lean.yml`: builds, audits, then commits status and roadmap page when they change.
+- `../.github/workflows/lean.yml` (at the repository root): on every push that touches this folder it builds and
+  audits the project; on `main` it then commits the status and the roadmap page when they change.
 
 ## Running locally
 
-With elan installed and network access to the Mathlib cache:
+With elan installed and network access to the Mathlib cache, from this folder:
 
 ```
 lake exe cache get && lake build && python3 axiom_audit.py
