@@ -7,11 +7,13 @@ density `Î”_st = 1/24` (Theorem 1.1); proves that a motif with marked period `2â
 least `2n` points, with equality only for antipodal Hadamard arrays (Theorem 1.2); and proves local
 maximality under perturbations of the motif and of the marked period (Theorem 1.3).
 
-A formalize pass takes the FIRST unchecked item (`- [ ]`), writes it in the file the item names, and
-ticks it (`- [x]`) only after CI shows it compiled. `- [-]` marks an item that is skipped or split.
+An hourly formalize task takes the FIRST unchecked item (`- [ ]`), writes it in the file the item names, and
+ticks it (`- [x]`) in the same commit, only after `lake build` and `axiom_audit.py` pass with the pinned toolchain;
+CI then confirms on main. `- [-]` marks an item that is skipped or split.
 [docs/roadmap.svg](docs/roadmap.svg) is a picture of this file and [docs/roadmap.html](docs/roadmap.html) an
 interactive map of it; CI redraws both after every verification run (`tools/build_roadmap.py`, with the layout
 data of `docs/roadmap_config.json`), and the page also reads this file live from main when opened in a browser.
+Its external copy is the [claude.ai artifact](https://claude.ai/artifact/FhkMghsQM4tqQxUNSNoc6P), which the formalize task republishes after each change.
 [verification/STATUS.md](verification/STATUS.md) lists every theorem with its axioms.
 
 Layout: `StealthAudit.lean` (root, imports Mathlib only), `StealthAudit/Basic.lean` (shared definitions:

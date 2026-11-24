@@ -2,8 +2,9 @@
 
 [![Roadmap: which results of the paper are proved in Lean, and the status of every work item](docs/roadmap.svg)](ROADMAP.md)
 
-The picture is redrawn by CI after every verified build of `main`. Statements of the items: [ROADMAP.md](ROADMAP.md).
-Every theorem with its axioms: [verification/STATUS.md](verification/STATUS.md).
+**[Interactive map](https://claude.ai/artifact/FhkMghsQM4tqQxUNSNoc6P)** (external link, claude.ai). The picture is redrawn by CI after every verified build of
+`main`. Statements of the items: [ROADMAP.md](ROADMAP.md). Every theorem with its axioms:
+[verification/STATUS.md](verification/STATUS.md).
 
 This folder of [stealth-non-lattice](https://github.com/JosiahPark/stealth-non-lattice) holds a Lean 4 + Mathlib
 (v4.35.0) project, `StealthAudit`, that formalizes results of
@@ -50,14 +51,15 @@ Three things to keep in mind when reading the table:
 
 [`ROADMAP.md`](ROADMAP.md) is the ordered work list: diffraction normalization (A), binary motifs and
 orthogonal arrays (B), the Hadamard construction (C), the sharp cardinality theorem (D), optimality
-consequences (E), local optimality (F), formal duality and numerical comparisons (G). 17 of 32 items are
-done. The next open items are A3 (general marked period, formula (3)), B2 (Proposition 3.1 as displayed) and
-D4–D9 (the equality case of Theorem 1.2).
+consequences (E), local optimality (F), formal duality and numerical comparisons (G). The picture at the top shows
+which items are done and which is next; an hourly formalize task takes the first open item, proves it, and ticks it
+only when `lake build` and `axiom_audit.py` pass.
 
 [`docs/roadmap.svg`](docs/roadmap.svg), shown above, is the static picture of the roadmap.
-[`docs/roadmap.html`](docs/roadmap.html) is the interactive version of the same map: download it and open it in a
-browser, or, once GitHub Pages is enabled for this repository (Settings → Pages → Deploy from a branch → `main`),
-open https://josiahpark.github.io/stealth-non-lattice/stealth-lean/docs/roadmap.html. It follows the style of
+[`docs/roadmap.html`](docs/roadmap.html) is the interactive version of the same map. Its external copy is the
+[claude.ai artifact](https://claude.ai/artifact/FhkMghsQM4tqQxUNSNoc6P), republished by the hourly formalize task whenever the roadmap changes
+(`tools/artifact_page.py` writes the copy; the artifact shows the snapshot it was published with). It follows the
+style of
 [steklov-lean](https://github.com/JosiahPark/steklov-lean) and
 [balian-low-asymptotics-hermitian-optimality](https://github.com/JosiahPark/balian-low-asymptotics-hermitian-optimality):
 sections as bands, one box per item, the paper's results as a spine on the right. CI refreshes the picture and
@@ -77,6 +79,7 @@ status live from `main`.
   that is just one of its own hypotheses. It writes `verification/STATUS.md` and `verification/STATUS.json`.
 - `tools/build_roadmap.py`: redraws `docs/roadmap.svg` and refreshes the snapshot inside `docs/roadmap.html`, from
   `ROADMAP.md`, the status, and the layout data in `docs/roadmap_config.json`.
+- `tools/artifact_page.py`: writes the copy of `docs/roadmap.html` that is published as the external map.
 - `../.github/workflows/lean.yml` (at the repository root): on every push that touches this folder it builds and
   audits the project; on `main` it then commits the status, the roadmap picture and the roadmap page when they
   change.
