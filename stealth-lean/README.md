@@ -1,7 +1,9 @@
 # Stealth Hadamard configurations: Lean verification
 
-**[Interactive roadmap map](https://josiahpark.github.io/stealth-non-lattice/stealth-lean/docs/roadmap.html)** ·
-[roadmap](ROADMAP.md) · [verification status](verification/STATUS.md)
+[![Roadmap: which results of the paper are proved in Lean, and the status of every work item](docs/roadmap.svg)](ROADMAP.md)
+
+The picture is redrawn by CI after every verified build of `main`. Statements of the items: [ROADMAP.md](ROADMAP.md).
+Every theorem with its axioms: [verification/STATUS.md](verification/STATUS.md).
 
 This folder of [stealth-non-lattice](https://github.com/JosiahPark/stealth-non-lattice) holds a Lean 4 + Mathlib
 (v4.35.0) project, `StealthAudit`, that formalizes results of
@@ -52,14 +54,15 @@ consequences (E), local optimality (F), formal duality and numerical comparisons
 done. The next open items are A3 (general marked period, formula (3)), B2 (Proposition 3.1 as displayed) and
 D4–D9 (the equality case of Theorem 1.2).
 
-[`docs/roadmap.html`](docs/roadmap.html) draws the roadmap as an interactive map
-([rendered page](https://josiahpark.github.io/stealth-non-lattice/stealth-lean/docs/roadmap.html), served by GitHub
-Pages from `main`), in the style of
+[`docs/roadmap.svg`](docs/roadmap.svg), shown above, is the static picture of the roadmap.
+[`docs/roadmap.html`](docs/roadmap.html) is the interactive version of the same map: download it and open it in a
+browser, or, once GitHub Pages is enabled for this repository (Settings → Pages → Deploy from a branch → `main`),
+open https://josiahpark.github.io/stealth-non-lattice/stealth-lean/docs/roadmap.html. It follows the style of
 [steklov-lean](https://github.com/JosiahPark/steklov-lean) and
 [balian-low-asymptotics-hermitian-optimality](https://github.com/JosiahPark/balian-low-asymptotics-hermitian-optimality):
-sections as bands, one box per item, the paper's results as a spine on the right. CI refreshes the page's
-snapshot after every verification run; opened in a browser, the page also reads `ROADMAP.md` and the status
-live from `main`.
+sections as bands, one box per item, the paper's results as a spine on the right. CI refreshes the picture and
+the page's snapshot after every verification run; opened in a browser, the page also reads `ROADMAP.md` and the
+status live from `main`.
 
 ## Layout
 
@@ -72,9 +75,11 @@ live from `main`.
 - `axiom_audit.py`: after `lake build`, runs `#print axioms` on every theorem and fails on `sorry`,
   non-standard axioms, escape hatches (`native_decide`, `axiom`, `unsafe`, heartbeat options, …), or a proof
   that is just one of its own hypotheses. It writes `verification/STATUS.md` and `verification/STATUS.json`.
-- `tools/build_roadmap.py`: refreshes the snapshot inside `docs/roadmap.html`.
+- `tools/build_roadmap.py`: redraws `docs/roadmap.svg` and refreshes the snapshot inside `docs/roadmap.html`, from
+  `ROADMAP.md`, the status, and the layout data in `docs/roadmap_config.json`.
 - `../.github/workflows/lean.yml` (at the repository root): on every push that touches this folder it builds and
-  audits the project; on `main` it then commits the status and the roadmap page when they change.
+  audits the project; on `main` it then commits the status, the roadmap picture and the roadmap page when they
+  change.
 
 ## Running locally
 

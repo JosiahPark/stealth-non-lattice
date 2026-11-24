@@ -57,14 +57,14 @@ jobs:
           if [ -f verification/STATUS.md ]; then cat verification/STATUS.md >> "$GITHUB_STEP_SUMMARY"; \
           else echo "# Lean verification status: FAIL (build did not finish)" >> "$GITHUB_STEP_SUMMARY"; fi
 
-      # Refresh the snapshot inside docs/roadmap.html from ROADMAP.md and STATUS.json.
-      - name: Rebuild the roadmap page
+      # Refresh docs/roadmap.html (snapshot) and docs/roadmap.svg (README picture) from ROADMAP.md and STATUS.json.
+      - name: Rebuild the roadmap page and picture
         if: always()
         continue-on-error: true
         run: python3 tools/build_roadmap.py
 
-      # Only on main. Commit status and roadmap page only when their content changed (the keys leave out the build time).
-      - name: Commit status and roadmap page if changed
+      # Only on main. Commit status, roadmap page and picture only when their content changed (the keys leave out the build time).
+      - name: Commit status and roadmap if changed
         if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           [ -f verification/STATUS.json ] || exit 0
@@ -77,8 +77,8 @@ jobs:
           git add verification/.status_key
           [ -f docs/.roadmap_key ] && git add docs/.roadmap_key
           if git diff --cached --quiet; then echo "Status and roadmap unchanged"; exit 0; fi
-          git add verification/STATUS.md verification/STATUS.json docs/roadmap.html
-          git -c user.name="lean-verify" -c user.email="lean-verify@users.noreply.github.com" commit -m "Update Lean verification status and roadmap page"
+          git add verification/STATUS.md verification/STATUS.json docs/roadmap.html docs/roadmap.svg
+          git -c user.name="lean-verify" -c user.email="lean-verify@users.noreply.github.com" commit -m "Update Lean verification status and roadmap"
           # main may have moved on during the build; rebase before pushing.
           for i in 1 2 3; do
             if git pull --rebase -q origin "${GITHUB_REF_NAME}" && git push; then exit 0; fi

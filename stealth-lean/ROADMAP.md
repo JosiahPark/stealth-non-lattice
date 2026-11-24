@@ -9,8 +9,9 @@ maximality under perturbations of the motif and of the marked period (Theorem 1.
 
 A formalize pass takes the FIRST unchecked item (`- [ ]`), writes it in the file the item names, and
 ticks it (`- [x]`) only after CI shows it compiled. `- [-]` marks an item that is skipped or split.
-[docs/roadmap.html](docs/roadmap.html) is an interactive map of this file; CI redraws its snapshot after
-every verification run, and the page also reads this file live from main when opened in a browser.
+[docs/roadmap.svg](docs/roadmap.svg) is a picture of this file and [docs/roadmap.html](docs/roadmap.html) an
+interactive map of it; CI redraws both after every verification run (`tools/build_roadmap.py`, with the layout
+data of `docs/roadmap_config.json`), and the page also reads this file live from main when opened in a browser.
 [verification/STATUS.md](verification/STATUS.md) lists every theorem with its axioms.
 
 Layout: `StealthAudit.lean` (root, imports Mathlib only), `StealthAudit/Basic.lean` (shared definitions:
