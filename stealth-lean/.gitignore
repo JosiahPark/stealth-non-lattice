@@ -1,0 +1,5 @@
+.lake/
+build.log
+build.exit
+AxiomAudit.lean
+__pycache__/

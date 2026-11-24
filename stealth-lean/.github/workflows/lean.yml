@@ -1,0 +1,89 @@
+name: Lean verification
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: lean-verify
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      # Installs the pinned Lean toolchain and downloads the prebuilt Mathlib cache.
+      - uses: leanprover/lean-action@v1
+        id: setup
+        timeout-minutes: 12
+        continue-on-error: true
+        with:
+          build: false
+          use-mathlib-cache: true
+
+      # The Mathlib cache download occasionally stalls near the end; retry it once.
+      - name: Retry Mathlib cache download
+        if: steps.setup.outcome != 'success'
+        timeout-minutes: 15
+        shell: bash
+        run: |
+          export PATH="$HOME/.elan/bin:$PATH"
+          lake exe cache get
+
+      # Build ourselves so the compiler output is saved for the status report.
+      - name: Build
+        shell: bash
+        run: |
+          export PATH="$HOME/.elan/bin:$PATH"
+          set -o pipefail
+          if lake build 2>&1 | tee build.log; then echo 0 > build.exit; else echo 1 > build.exit; exit 1; fi
+
+      - name: Axiom audit (fails on build errors, sorry, escape hatches or non-standard axioms)
+        if: always()
+        shell: bash
+        run: |
+          export PATH="$HOME/.elan/bin:$PATH"
+          python3 axiom_audit.py
+
+      - name: Publish status to the run summary
+        if: always()
+        run: |
+          if [ -f verification/STATUS.md ]; then cat verification/STATUS.md >> "$GITHUB_STEP_SUMMARY"; \
+          else echo "# Lean verification status: FAIL (build did not finish)" >> "$GITHUB_STEP_SUMMARY"; fi
+
+      # Refresh the snapshot inside docs/roadmap.html from ROADMAP.md and STATUS.json.
+      - name: Rebuild the roadmap page
+        if: always()
+        continue-on-error: true
+        run: python3 tools/build_roadmap.py
+
+      # Commit status and roadmap page only when their content changed (the keys leave out the build time).
+      - name: Commit status and roadmap page if changed
+        if: always() && github.event_name != 'pull_request'
+        run: |
+          [ -f verification/STATUS.json ] || exit 0
+          python3 - <<'PY'
+          import json, pathlib
+          p = pathlib.Path("verification/STATUS.json"); d = json.loads(p.read_text())
+          d.pop("checked_at", None); d.pop("commit", None)
+          pathlib.Path("verification/.status_key").write_text(json.dumps(d, sort_keys=True))
+          PY
+          git add verification/.status_key
+          [ -f docs/.roadmap_key ] && git add docs/.roadmap_key
+          if git diff --cached --quiet; then echo "Status and roadmap unchanged"; exit 0; fi
+          git add verification/STATUS.md verification/STATUS.json docs/roadmap.html
+          git -c user.name="lean-verify" -c user.email="lean-verify@users.noreply.github.com" commit -m "Update Lean verification status and roadmap page"
+          # main may have moved on during the build (e.g. a follow-up ROADMAP commit); rebase before pushing.
+          for i in 1 2 3; do
+            if git pull --rebase -q origin "${GITHUB_REF_NAME}" && git push; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+          done
+          echo "Could not push the status commit after 3 attempts"; exit 1
