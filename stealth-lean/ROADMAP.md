@@ -335,12 +335,13 @@ radius). Proposition 7.1 counts as proved only for that definition, and READMEs 
   `(LinearMap.range (Matrix.toLin' B)).toAddSubgroup.index = B.det.natAbs`, and `2ℤⁿ` has index `2ⁿ`
   (from `Submodule.natAbs_det_equiv`). File `StealthAudit/IndexDet.lean`.
   - Done 2026-11-25 04:56 UTC: `toLin'_injective_of_det_ne_zero`, `index_range_toLin'`, `index_range_two`. Nothing weakened.
-- [ ] H4b. Coset counting: let `H : AddSubgroup (Fin n → ℤ)` with `H.index ≠ 0`, and `r : Fin M → Fin n → ℤ`
+- [x] H4b. Coset counting: let `H : AddSubgroup (Fin n → ℤ)` with `H.index ≠ 0`, and `r : Fin M → Fin n → ℤ`
   pairwise distinct modulo `H` (`r l − r k ∈ H → k = l`), such that the union of the cosets `r k + H` is
   invariant under `2ℤⁿ` (`∀ k v, ∃ l, r k + 2 • v − r l ∈ H`). Then `∃ c : ℕ, 2 ^ n * M = c * H.index`.
   (With `L = H ⊔ 2ℤⁿ`: the cosets form a union of `L`-cosets, so `H.relIndex L ∣ M`; `L.index ∣ 2ⁿ`
   by `index_range_two` and `relIndex_mul_index`; `H.index = H.relIndex L * L.index`.)
   File `StealthAudit/CosetCounting.lean`.
+  - Done 2026-11-25 05:03 UTC: `twoZ`, `mem_twoZ`, `card_fiber`, `relIndex_dvd_card`, `two_pow_mul_card_eq`. Proved without the hypothesis `H.index ≠ 0`.
 - [ ] H4c. The density is an integer: for `Q : PeriodicConfig n` such that every `u ∈ ℤⁿ` is a period
   (`∀ u x, Q.mem x → Q.mem (x + fun i => (u i : ℝ))`, as given by H3) and any two points differ by a
   vector of `½ℤⁿ` (as given by `formallyDual_support`, H2), `∃ m : ℕ, Q.density = m`. Apply H4b to
