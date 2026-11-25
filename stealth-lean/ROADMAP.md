@@ -221,12 +221,13 @@ Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
 §6: Lemma 6.1 and Theorem 1.3. Nothing of this section is proved yet except the weight-four step
 (`charSum_ne_zero_of_card_mod_sixteen` in B3).
 
-- [ ] F1. The sign lemma inside Lemma 6.1: let `n ≥ 4` and let `E : Matrix (Fin n) (Fin n) ℝ` be
+- [x] F1. The sign lemma inside Lemma 6.1: let `n ≥ 4` and let `E : Matrix (Fin n) (Fin n) ℝ` be
   symmetric with trace `0` and `E ≠ 0`. Then there is `v` in
   `V = {2eᵢ} ∪ {∑_{i ∈ I} εᵢ eᵢ : |I| = 4, εᵢ = ±1}` with `vᵀ E v < 0`. (If some `E i i < 0` take `2eᵢ`.
   Otherwise all diagonal entries vanish; pick `a ≠ b` with `E a b ≠ 0` and a 4-set `I ∋ a, b`; the 16
   values `q(ε) = ∑_{i ≠ j ∈ I} εᵢ εⱼ E i j` sum to `0`, and `∑_ε ε_a ε_b q(ε) = 32 E a b ≠ 0`, so some
   `q(ε) < 0`.) State `V` as a `Set (Fin n → ℤ)` named `testVectors n`. File `StealthAudit/TraceFreeSign.lean`.
+  - Done 2026-11-25 05:45 UTC: `testVectors`, `exists_sign_pattern_neg`, `quadForm_two_single`, `exists_testVector_quadForm_neg`. Symmetry is the hypothesis `∀ i j, E i j = E j i`; `vᵀ E v` is `quadForm E v` of A3. Nothing weakened.
 - [ ] F2. Amplitudes on the test vectors: for a binary motif of strength three with
   `N ≡ 8 (mod 16)` and `n ≥ 4`, `amp X v ≠ 0` for every `v ∈ testVectors n` (for `2eᵢ`:
   `amp_two_mul_single` of B1; for `|I| = 4`: `amp_of_isBinary` with `oddSupp v = I`, then
