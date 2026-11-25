@@ -1,16 +1,56 @@
 {
-  "checked_at": "2026-11-25 04:04 UTC",
-  "commit": "2fba6dcae6b2622d68976ad9d2f51697c6601449",
+  "checked_at": "2026-11-25 04:07 UTC",
+  "commit": "97ec529fb74ebbe50663fb787e7c84f588d56175",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 247,
-  "verified": 247,
+  "theorems": 251,
+  "verified": 251,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
   "tautologies": [],
   "results": [
+    {
+      "file": "StealthAudit/AmpContinuity.lean",
+      "theorem": "Stealth.continuous_dot_right",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/AmpContinuity.lean",
+      "theorem": "Stealth.continuous_phase_right",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/AmpContinuity.lean",
+      "theorem": "Stealth.continuous_amp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/AmpContinuity.lean",
+      "theorem": "Stealth.eventually_amp_ne_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
     {
       "file": "StealthAudit/AntipodalArray.lean",
       "theorem": "Stealth.isBinary_antipodalMotif",

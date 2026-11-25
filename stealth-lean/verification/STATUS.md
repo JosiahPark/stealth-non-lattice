@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 04:04 UTC at commit `2fba6dcae6b2`.
+Checked 2026-11-25 04:07 UTC at commit `97ec529fb74e`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 247 of 247
+- Theorems verified with standard axioms only: 251 of 251
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -11,6 +11,10 @@ Checked 2026-11-25 04:04 UTC at commit `2fba6dcae6b2`.
 
 | file | theorem | status |
 |---|---|---|
+| StealthAudit/AmpContinuity.lean | `Stealth.continuous_dot_right` | verified (standard axioms only) |
+| StealthAudit/AmpContinuity.lean | `Stealth.continuous_phase_right` | verified (standard axioms only) |
+| StealthAudit/AmpContinuity.lean | `Stealth.continuous_amp` | verified (standard axioms only) |
+| StealthAudit/AmpContinuity.lean | `Stealth.eventually_amp_ne_zero` | verified (standard axioms only) |
 | StealthAudit/AntipodalArray.lean | `Stealth.isBinary_antipodalMotif` | verified (standard axioms only) |
 | StealthAudit/AntipodalArray.lean | `Stealth.one_sub_two_mul_antipodalMotif` | verified (standard axioms only) |
 | StealthAudit/AntipodalArray.lean | `Stealth.charSum_antipodalMotif` | verified (standard axioms only) |
