@@ -364,12 +364,13 @@ bridge note supplied by Josiah on 2026-11-25. Write `Q = T/2 + ℤⁿ` with `T` 
 `∑_S D_T(S) = M²`, gives `N M = 2ⁿ`. The candidate Lean files of that note were never compiled; each
 item must build here before it is ticked.
 
-- [ ] I1. Binary Parseval: for a binary motif `X` with `Function.Injective X`,
+- [x] I1. Binary Parseval: for a binary motif `X` with `Function.Injective X`,
   `∑ S ∈ univ.powerset, charSum X S ^ 2 = 2 ^ n * N` (`binary_dual_parseval`, via the XOR motif on `ι × ι`,
   whose character sums are `charSum X S ^ 2`, and `two_pow_mul_card_zeros` of B3 with `T = univ`). For any
   binary `Y : κ → Fin n → ℝ`, with `D_Y(S) = #{(k, l) : {i | Y k i ≠ Y l i} = S}`,
   `∑ S ∈ univ.powerset, D_Y(S) = (card κ) ^ 2` (`binaryDiffCount_sum`).
   File `StealthAudit/BinaryParseval.lean`.
+  - Done 2026-11-25 06:24 UTC: `dualXorMotif`, `dualXorMotif_binary`, `dualXorMotif_zero_iff`, `dualXorMotif_sign`, `charSum_dualXorMotif`, `dual_injective_of_distinctModPeriod`, `binary_dual_parseval`, `binaryDiffCount`, `binaryDiffCount_sum`. Stated as in the item; the candidate code needed two small proof repairs.
 - [ ] I2. Finite binary formal duality: define `IsBinaryFormalDual X Y`. Both motifs are nonempty, binary
   and injective, and `card κ * charSum X S ^ 2 = N ^ 2 * D_Y(S)` for every `S`. Prove
   `binaryFormalDual_card_mul : N * card κ = 2 ^ n` (sum over `S`, using I1) and
