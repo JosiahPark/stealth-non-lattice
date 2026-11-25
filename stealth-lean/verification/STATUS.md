@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 04:07 UTC at commit `97ec529fb74e`.
+Checked 2026-11-25 04:10 UTC at commit `062dc39da01d`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 251 of 251
+- Theorems verified with standard axioms only: 255 of 255
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -249,6 +249,10 @@ Checked 2026-11-25 04:07 UTC at commit `97ec529fb74e`.
 | StealthAudit/Theorem12.lean | `Stealth.theorem_1_2_backward` | verified (standard axioms only) |
 | StealthAudit/Theorem12.lean | `Stealth.theorem_1_2_forward` | verified (standard axioms only) |
 | StealthAudit/Theorem12.lean | `Stealth.theorem_1_2` | verified (standard axioms only) |
+| StealthAudit/Theorem13.lean | `Stealth.centerDensityQ_le_of_gapQ_le` | verified (standard axioms only) |
+| StealthAudit/Theorem13.lean | `Stealth.centerDensityQ_lt_of_gapQ_lt` | verified (standard axioms only) |
+| StealthAudit/Theorem13.lean | `Stealth.centerDensityQ_one_of_strength_three` | verified (standard axioms only) |
+| StealthAudit/Theorem13.lean | `Stealth.theorem_1_3` | verified (standard axioms only) |
 | StealthAudit/TraceFreeConstant.lean | `Stealth.mem_testFinset` | verified (standard axioms only) |
 | StealthAudit/TraceFreeConstant.lean | `Stealth.testFinset_nonempty` | verified (standard axioms only) |
 | StealthAudit/TraceFreeConstant.lean | `Stealth.quadForm_smul` | verified (standard axioms only) |
