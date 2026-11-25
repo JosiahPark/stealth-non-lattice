@@ -321,9 +321,10 @@ radius). Proposition 7.1 counts as proved only for that definition, and READMEs 
   The paper says "supported on `ℤⁿ`"; the argument needs only `½ℤⁿ`, which is what (ii) gives.
   File `StealthAudit/FormalDuality.lean`.
   - Done 2026-11-25 04:42 UTC: `HalfIntVec`, `motifPairCoeff`, `PeriodicConfig.InDual`, `PeriodicConfig.fourierCoeff`, `FormallyDual` (structure: `DistinctModPeriod X` and conditions (i)–(iii)); `pairCoeff_of_formallyDual`, `formallyDual_support`. The pair-coefficient characterization is the definition; its equivalence with the analytic definition of [3] is not formalized (stated in the docstring).
-- [ ] H3. Integer vectors are periods of a formal dual. For binary `X`:
+- [x] H3. Integer vectors are periods of a formal dual. For binary `X`:
   `FormallyDual X Q → ∀ u : Fin n → ℤ, ∀ x, mem Q x → mem Q (x + u)`. This follows from (ii) at `t = u`,
   `amp_two_mul` (G3: `a_X(2u) = N`) and `pairCoeff_eq_one_iff` (H1). File `StealthAudit/FormalDualPeriods.lean`.
+  - Done 2026-11-25 04:48 UTC: `card_pos_of_formallyDual`, `pairCoeff_int_of_formallyDual`, `int_period_of_formallyDual` (the period is written `x + fun i => (u i : ℝ)`). Nothing weakened; relative to the definition of H2.
 - [ ] H4. The density of a `ℤⁿ`-periodic configuration is an integer. If every integer vector is a period
   of `Q` and `Q − Q ⊆ ½ℤⁿ`, then `∃ m : ℕ, density Q = m`.
   Sketch: `Γ ⊆ ½ℤⁿ`. Let `L = Γ + ℤⁿ`. Then `L/Γ` acts freely on the `M` classes, so `M = [L : Γ] · m`,
