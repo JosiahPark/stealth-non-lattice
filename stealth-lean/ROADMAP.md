@@ -228,10 +228,11 @@ Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
   values `q(ε) = ∑_{i ≠ j ∈ I} εᵢ εⱼ E i j` sum to `0`, and `∑_ε ε_a ε_b q(ε) = 32 E a b ≠ 0`, so some
   `q(ε) < 0`.) State `V` as a `Set (Fin n → ℤ)` named `testVectors n`. File `StealthAudit/TraceFreeSign.lean`.
   - Done 2026-11-25 05:45 UTC: `testVectors`, `exists_sign_pattern_neg`, `quadForm_two_single`, `exists_testVector_quadForm_neg`. Symmetry is the hypothesis `∀ i j, E i j = E j i`; `vᵀ E v` is `quadForm E v` of A3. Nothing weakened.
-- [ ] F2. Amplitudes on the test vectors: for a binary motif of strength three with
+- [x] F2. Amplitudes on the test vectors: for a binary motif of strength three with
   `N ≡ 8 (mod 16)` and `n ≥ 4`, `amp X v ≠ 0` for every `v ∈ testVectors n` (for `2eᵢ`:
   `amp_two_mul_single` of B1; for `|I| = 4`: `amp_of_isBinary` with `oddSupp v = I`, then
   `charSum_ne_zero_of_card_mod_sixteen` of B3). File `StealthAudit/TestAmplitudes.lean`.
+  - Done 2026-11-25 06:00 UTC: `oddSupp_eq_of_testVector`, `amp_testVector_ne_zero`, `testVector_ne_zero`, `survives_of_mem_testVectors`. The hypothesis `n ≥ 4` is not needed.
 - [ ] F3. Lemma 6.1 (strict reciprocal-Gram maximum): with `m Q = ⨅ v ∈ testVectors n, vᵀ Q v` (a minimum
   over a finite set), there is `δ > 0` such that every symmetric positive definite `Q` with `det Q = 1`
   and `0 < ‖Q − 1‖ < δ` has `m Q < 4`, and `m 1 = 4`. (F1, compactness of the unit sphere of trace-free
