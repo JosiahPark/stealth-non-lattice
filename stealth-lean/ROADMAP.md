@@ -355,6 +355,40 @@ radius). Proposition 7.1 counts as proved only for that definition, and READMEs 
   `n = 10, 11, 12`. File `StealthAudit/Proposition71.lean`.
   - Done 2026-11-25 05:16 UTC: `card_mul_density_of_formallyDual`, `card_dvd_two_pow_of_formallyDual`, `proposition_7_1` (stated with `Q` explicit: `IsBinary X → Fintype.card ι = 24 → ∀ Q, ¬ FormallyDual X Q`), `proposition_7_1_paley`. This is Proposition 7.1 for the pair-coefficient definition of formal duality of H2, with no other hypothesis; the equivalence with the analytic definition of [3] is not formalized.
 
+## I. Proposition 7.1 without the density condition
+
+§7. Section H proves Proposition 7.1 for `FormallyDual` (H2), whose condition (i) is `ρ(P) ρ(Q) = 1`. This
+section proves it from the pair-coefficient condition (ii) alone, following the Parseval argument of the
+bridge note supplied by Josiah on 2026-11-25. Write `Q = T/2 + ℤⁿ` with `T` binary. Then (ii) reads
+`M · charSum X S² = N² · D_T(S)`. Summing over `S`, with `∑_S charSum X S² = 2ⁿ N` and
+`∑_S D_T(S) = M²`, gives `N M = 2ⁿ`. The candidate Lean files of that note were never compiled; each
+item must build here before it is ticked.
+
+- [ ] I1. Binary Parseval: for a binary motif `X` with `Function.Injective X`,
+  `∑ S ∈ univ.powerset, charSum X S ^ 2 = 2 ^ n * N` (`binary_dual_parseval`, via the XOR motif on `ι × ι`,
+  whose character sums are `charSum X S ^ 2`, and `two_pow_mul_card_zeros` of B3 with `T = univ`). For any
+  binary `Y : κ → Fin n → ℝ`, with `D_Y(S) = #{(k, l) : {i | Y k i ≠ Y l i} = S}`,
+  `∑ S ∈ univ.powerset, D_Y(S) = (card κ) ^ 2` (`binaryDiffCount_sum`).
+  File `StealthAudit/BinaryParseval.lean`.
+- [ ] I2. Finite binary formal duality: define `IsBinaryFormalDual X Y`. Both motifs are nonempty, binary
+  and injective, and `card κ * charSum X S ^ 2 = N ^ 2 * D_Y(S)` for every `S`. Prove
+  `binaryFormalDual_card_mul : N * card κ = 2 ^ n` (sum over `S`, using I1) and
+  `no_binaryFormalDual_of_card_24`. File `StealthAudit/BinaryFormalDuality.lean`.
+- [ ] I3. Change of marked period: if two `PeriodicConfig n` (H1) have the same points
+  (`∀ x, Q.mem x ↔ Q'.mem x`), then `Q.pairCoeff t = Q'.pairCoeff t` for every `t`. Proof by common
+  refinement: `H = Γ ∩ Γ'` has finite index in both, and each coset of `Γ` splits into `[Γ : H]` cosets
+  of `H` on which survival under translation by `t` is constant. Split when taken.
+  File `StealthAudit/PeriodChange.lean`.
+- [ ] I4. Cubic normal form of a formal dual: if every `u ∈ ℤⁿ` is a period of `Q` and `Q − Q ⊆ ½ℤⁿ`,
+  then there are a binary injective `T : Fin m → Fin n → ℝ` and `x₀` such that `Q` has the same points as
+  `x₀ + T/2 + ℤⁿ` (`A = 1`, representatives `x₀ + T k / 2`). For `u ∈ {0,1}ⁿ` with support `S`, the pair
+  coefficient of that configuration at `u/2` is `D_T(S) / m`. File `StealthAudit/CubicNormalForm.lean`.
+- [ ] I5. Proposition 7.1 from condition (ii) alone: define `FormallyDualCoeff X Q` as
+  `DistinctModPeriod X` together with conditions (ii) of H2, without (i) or (iii). Prove
+  `proposition_7_1_coeff : IsBinary X → Fintype.card ι = 24 → ¬ FormallyDualCoeff X Q`, combining H2–H3,
+  I3, I4, I2 and `amp_of_isBinary`, and derive `ρ(P) ρ(Q) = 1` as a consequence (`density_mul_of_coeff`).
+  File `StealthAudit/Proposition71Coeff.lean`.
+
 ## Not attempted here
 
 - The diffraction measure of a periodic set and the derivation of formula (2) from it. `stealthRadius` is defined by (2).
