@@ -291,10 +291,52 @@ Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
   `24 ∤ 2ⁿ`; `2ⁿ/24` is not an integer. File `StealthAudit/FormalDualityArithmetic.lean`.
   - Done 2026-11-24: `amp_two_mul`, `not_twentyfour_dvd_two_pow`, `two_pow_div_twentyfour_not_int`. Proposition 7.1 itself is not proved (see "Not attempted here").
 
+## H. Proposition 7.1 (formal duality)
+
+§7. Proposition 7.1 says that `P_n = C_n + 2ℤⁿ` (`n = 10, 11, 12`) has no formal dual among simple equally
+weighted periodic configurations. The definition of formal duality in [3] (Cohn, Kumar, Reiher, Schürmann)
+uses Poisson-type summation over Schwartz functions; that analytic definition is not formalized here.
+These items use instead the pair-correlation characterization of formal duality for periodic
+configurations from [3], which is taken as the DEFINITION (in the same way formula (2) defines the stealth
+radius). Proposition 7.1 counts as proved only for that definition, and READMEs must say so.
+
+- [ ] H1. Simple periodic configurations and their pair coefficients. A `PeriodicConfig n` is a matrix
+  `A : Matrix (Fin n) (Fin n) ℝ` with `A.det ≠ 0`, together with `M > 0` representatives
+  `w : Fin M → Fin n → ℝ` that are distinct modulo `Γ = {A.mulVec z | z : Fin n → ℤ}`. Define:
+  membership `mem Q x ↔ ∃ k z, x = w k + A.mulVec z`; `density Q = M / |A.det|`; and
+  `pairCoeff Q t = #{(k, l) | w l − w k − t ∈ Γ} / M`. Prove `pairCoeff_zero : pairCoeff Q 0 = 1`,
+  `pairCoeff_le_one`, `pairCoeff_pos_iff : 0 < pairCoeff Q t ↔ ∃ x y, mem Q x ∧ mem Q y ∧ y − x = t`, and
+  `pairCoeff_eq_one_iff : pairCoeff Q t = 1 ↔ ∀ x, mem Q x → mem Q (x + t)`. Both bounds use distinctness:
+  each `k` has at most one matching `l`. File `StealthAudit/PeriodicConfig.lean`.
+- [ ] H2. Formal duality with a cubic-period configuration. For a motif `X : ι → Fin n → ℝ` with
+  `DistinctModPeriod X` (so `P = X + 2ℤⁿ`, density `N/2ⁿ`), define `FormallyDual X Q` by three conditions:
+  (i) `(N / 2ⁿ) · density Q = 1`;
+  (ii) for every `t : Fin n → ℝ`, `pairCoeff Q t = ‖amp X u‖² / N²` when `2t = u ∈ ℤⁿ`, and `0` otherwise;
+  (iii) the same with the roles exchanged: the pair coefficient of `P` at `s` equals the normalized squared
+  Fourier coefficient of `Q`, `‖∑ₖ e^{2πi⟨s, w k⟩}‖² / M²`, for `s` in the dual lattice of `Γ`, and is `0`
+  for any other `s`.
+  The docstring must state that this characterization is the definition used. Prove
+  `formallyDual_support : FormallyDual X Q → mem Q x → mem Q y → ∀ i, ∃ z : ℤ, 2 * (y i − x i) = z`.
+  The paper says "supported on `ℤⁿ`"; the argument needs only `½ℤⁿ`, which is what (ii) gives.
+  File `StealthAudit/FormalDuality.lean`.
+- [ ] H3. Integer vectors are periods of a formal dual. For binary `X`:
+  `FormallyDual X Q → ∀ u : Fin n → ℤ, ∀ x, mem Q x → mem Q (x + u)`. This follows from (ii) at `t = u`,
+  `amp_two_mul` (G3: `a_X(2u) = N`) and `pairCoeff_eq_one_iff` (H1). File `StealthAudit/FormalDualPeriods.lean`.
+- [ ] H4. The density of a `ℤⁿ`-periodic configuration is an integer. If every integer vector is a period
+  of `Q` and `Q − Q ⊆ ½ℤⁿ`, then `∃ m : ℕ, density Q = m`.
+  Sketch: `Γ ⊆ ½ℤⁿ`. Let `L = Γ + ℤⁿ`. Then `L/Γ` acts freely on the `M` classes, so `M = [L : Γ] · m`,
+  and `|A.det| = [L : Γ] / [L : ℤⁿ]` by `ZLattice.covolume_div_covolume_eq_relIndex` (or
+  `AddSubgroup.relIndex_eq_natAbs_det` after scaling by `2`). Split into H4a (counting) and H4b
+  (index = determinant) when taken. File `StealthAudit/PeriodicDensity.lean`.
+- [ ] H5. Proposition 7.1. Prove `proposition_7_1 : IsBinary X → Fintype.card ι = 24 → ¬ FormallyDual X Q`
+  for every `n`, because (i) would give `density Q = 2ⁿ/24`, which is not an integer
+  (`two_pow_div_twentyfour_not_int`, G3; H3; H4). Add the corollary for the motifs `C_n` of `theorem_1_1`,
+  `n = 10, 11, 12`. File `StealthAudit/Proposition71.lean`.
+
 ## Not attempted here
 
 - The diffraction measure of a periodic set and the derivation of formula (2) from it. `stealthRadius` is defined by (2).
-- Proposition 7.1 (no ordinary periodic formal dual): it needs a Lean definition of formal duality of periodic configurations in the sense of Cohn, Kumar, Reiher and Schürmann. Only its arithmetic is checked (G3).
+- The analytic definition of formal duality in [3] (Poisson-type summation over Schwartz functions). Section H uses the pair-correlation characterization of periodic formal duality as the definition instead.
 - The values quoted in §7 from the literature (center densities of duals of record lattice packings, Cohn's table). They enter G1 as numbers.
 - Any statement about arbitrary period lattices or supercells beyond the marked period model of Theorem 1.3; the paper claims none.
 - The finite-instance Python script `verify_hadamard.py` of §8 is not part of this repository; its checks of the Paley matrix are subsumed by C1–C5.
