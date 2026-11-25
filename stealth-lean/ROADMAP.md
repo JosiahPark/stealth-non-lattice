@@ -218,8 +218,7 @@ Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
 
 ## F. Local optimality of the marked configuration
 
-§6: Lemma 6.1 and Theorem 1.3. Nothing of this section is proved yet except the weight-four step
-(`charSum_ne_zero_of_card_mod_sixteen` in B3).
+§6: Lemma 6.1 and Theorem 1.3. Lemma 6.1 is proved (F1–F3c); Theorem 1.3 is open (F4, F5).
 
 - [x] F1. The sign lemma inside Lemma 6.1: let `n ≥ 4` and let `E : Matrix (Fin n) (Fin n) ℝ` be
   symmetric with trace `0` and `E ≠ 0`. Then there is `v` in
@@ -247,11 +246,12 @@ Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
   `{E symmetric, tr E = 0, frobSq E = 1}`, the minimum over the finitely many test vectors being continuous
   and negative there; homogeneity). File `StealthAudit/TraceFreeConstant.lean`.
   - Done 2026-11-25 06:55 UTC: `testFinset`, `mem_testFinset`, `testFinset_nonempty`, `quadForm_smul`, `frobSq_smul`, `entry_sq_le_frobSq`, `frobSq_pos`, `continuous_quadForm_left`, `exists_trace_free_constant`. Nothing weakened.
-- [ ] F3c. Lemma 6.1 assembled: every test vector has `quadForm 1 v = 4`; there is `δ > 0` such that every
+- [x] F3c. Lemma 6.1 assembled: every test vector has `quadForm 1 v = 4`; there is `δ > 0` such that every
   real symmetric positive definite `Q` with `det Q = 1` and `0 < frobSq (Q − 1) < δ` has a test vector
   with `quadForm Q v < 4` (write `Q = 1 + F`, `F = E + (tr F / n) 1`; `quadForm Q v = 4 + quadForm E v +
   4 tr F / n`, F3a and F3b; `E ≠ 0` since a scalar `F` with `det (1 + F) = 1` is `0`).
   File `StealthAudit/ReciprocalGram.lean`.
+  - Done 2026-11-25 07:20 UTC: `quadForm_add`, `quadForm_one_testVector`, `frobSq_sub_smul_one`, `lemma_6_1`. The norm `‖Q − 1‖` is the Frobenius norm (`frobSq` is its square); the minimum over `V` is stated as the existence of a test vector with `vᵀQv < 4`. This is Lemma 6.1 with no hypothesis beyond the paper's.
 - [ ] F4. Stability of the amplitudes: for fixed `u`, `X ↦ amp X u` is continuous on `ι → Fin n → ℝ`, so a
   finite set of nonzero amplitudes stays nonzero in a neighbourhood of `X`.
   File `StealthAudit/AmpContinuity.lean`.
