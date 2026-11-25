@@ -162,11 +162,12 @@ Theorem 1.2 (items D4–D9) is open.
   `W`; if `r ≥ 1` of them equal `a = W ≠ −1`, then `(r − 1) a = n − r − 1`; `r = 1` forces `n = 2`; so `a`
   is real of modulus one, hence `a = 1` and `2r = n`. File `StealthAudit/UnitRootSystem.lean`.
   - Done 2026-11-25 03:25 UTC: `eq_neg_one_or_eq_of_unit_system`, `unit_system`. Stated as in the item, nothing weakened.
-- [ ] D7. Differences in the equality case: if `GapAtLeast X 4`, `Fintype.card ι = 2 * n` and `n ≥ 3`, then
+- [x] D7. Differences in the equality case: if `GapAtLeast X 4`, `Fintype.card ι = 2 * n` and `n ≥ 3`, then
   for `k ≠ l` every coordinate difference `X l i − X k i` is an integer, and the number of `i` for which it
   is odd is `n` or `n/2` (D4 with `κ = Fin n × Bool`, `b = ind ∘ pivotSet j`, for every `j`; D5; D6;
   `e^{πi d} = ±1` forces `d ∈ ℤ` with the matching parity). In particular the points are distinct modulo
   `2ℤⁿ`, and `n` is even when `N > 2`. File `StealthAudit/EqualityDifferences.lean`.
+  - Done 2026-11-25 03:50 UTC: `amp_pivot_sub_eq_zero`, `pivot_relation`, `phase_ind_singleton`, `exists_int_of_exp_eq_one_or_neg_one`, `equality_differences`, `distinctModPeriod_of_equality`, `even_of_equality`. "Odd" is stated for the integer differences `zᵢ` (`zᵢ % 2 = 1`); nothing weakened.
 - [ ] D8. From Hamming distances to a Hadamard matrix: let `Y : ι → Fin n → ℝ` be a binary motif with
   `Fintype.card ι = 2 * n`, `n ≥ 1`, such that for `k ≠ l` the points `Y k`, `Y l` differ in exactly `n` or
   exactly `n/2` coordinates (`2 * #{i : Y k i ≠ Y l i} = n` in the second case). Then there are a Hadamard
