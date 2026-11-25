@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 03:46 UTC at commit `72c1ff8ab551`.
+Checked 2026-11-25 03:52 UTC at commit `1cd57bd57680`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 221 of 221
+- Theorems verified with standard axioms only: 228 of 228
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -217,6 +217,10 @@ Checked 2026-11-25 03:46 UTC at commit `72c1ff8ab551`.
 | StealthAudit/StealthRadius.lean | `Stealth.centerDensity_translate` | verified (standard axioms only) |
 | StealthAudit/StealthRadius.lean | `Stealth.two_mul_le_card_of_one_le_stealthRadius` | verified (standard axioms only) |
 | StealthAudit/StealthRadius.lean | `Stealth.rank_obstruction_of_one_lt_stealthRadius` | verified (standard axioms only) |
+| StealthAudit/TestAmplitudes.lean | `Stealth.oddSupp_eq_of_testVector` | verified (standard axioms only) |
+| StealthAudit/TestAmplitudes.lean | `Stealth.amp_testVector_ne_zero` | verified (standard axioms only) |
+| StealthAudit/TestAmplitudes.lean | `Stealth.testVector_ne_zero` | verified (standard axioms only) |
+| StealthAudit/TestAmplitudes.lean | `Stealth.survives_of_mem_testVectors` | verified (standard axioms only) |
 | StealthAudit/Theorem11.lean | `Stealth.amp_reindex` | verified (standard axioms only) |
 | StealthAudit/Theorem11.lean | `Stealth.gapSq_reindex` | verified (standard axioms only) |
 | StealthAudit/Theorem11.lean | `Stealth.stealthRadius_reindex` | verified (standard axioms only) |
@@ -230,5 +234,8 @@ Checked 2026-11-25 03:46 UTC at commit `72c1ff8ab551`.
 | StealthAudit/Theorem12.lean | `Stealth.theorem_1_2_backward` | verified (standard axioms only) |
 | StealthAudit/Theorem12.lean | `Stealth.theorem_1_2_forward` | verified (standard axioms only) |
 | StealthAudit/Theorem12.lean | `Stealth.theorem_1_2` | verified (standard axioms only) |
+| StealthAudit/TraceFreeSign.lean | `Stealth.exists_sign_pattern_neg` | verified (standard axioms only) |
+| StealthAudit/TraceFreeSign.lean | `Stealth.quadForm_two_single` | verified (standard axioms only) |
+| StealthAudit/TraceFreeSign.lean | `Stealth.exists_testVector_quadForm_neg` | verified (standard axioms only) |
 | StealthAudit/UnitRootSystem.lean | `Stealth.eq_neg_one_or_eq_of_unit_system` | verified (standard axioms only) |
 | StealthAudit/UnitRootSystem.lean | `Stealth.unit_system` | verified (standard axioms only) |

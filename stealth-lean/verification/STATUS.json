@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 03:46 UTC",
-  "commit": "72c1ff8ab55196e321e41a9e7e047a4a59c5b6fa",
+  "checked_at": "2026-11-25 03:52 UTC",
+  "commit": "1cd57bd57680be017796562bc10c37d84674fed1",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 221,
-  "verified": 221,
+  "theorems": 228,
+  "verified": 228,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -2069,6 +2069,46 @@
       "status": "verified (standard axioms only)"
     },
     {
+      "file": "StealthAudit/TestAmplitudes.lean",
+      "theorem": "Stealth.oddSupp_eq_of_testVector",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TestAmplitudes.lean",
+      "theorem": "Stealth.amp_testVector_ne_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TestAmplitudes.lean",
+      "theorem": "Stealth.testVector_ne_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TestAmplitudes.lean",
+      "theorem": "Stealth.survives_of_mem_testVectors",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
       "file": "StealthAudit/Theorem11.lean",
       "theorem": "Stealth.amp_reindex",
       "axioms": [
@@ -2191,6 +2231,36 @@
     {
       "file": "StealthAudit/Theorem12.lean",
       "theorem": "Stealth.theorem_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TraceFreeSign.lean",
+      "theorem": "Stealth.exists_sign_pattern_neg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TraceFreeSign.lean",
+      "theorem": "Stealth.quadForm_two_single",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TraceFreeSign.lean",
+      "theorem": "Stealth.exists_testVector_quadForm_neg",
       "axioms": [
         "propext",
         "Classical.choice",
