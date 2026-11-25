@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 03:52 UTC at commit `1cd57bd57680`.
+Checked 2026-11-25 03:58 UTC at commit `e053b2ee1803`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 228 of 228
+- Theorems verified with standard axioms only: 235 of 235
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -89,6 +89,13 @@ Checked 2026-11-25 03:52 UTC at commit `1cd57bd57680`.
 | StealthAudit/Comparisons.lean | `Stealth.lt_dim_eleven` | verified (standard axioms only) |
 | StealthAudit/Comparisons.lean | `Stealth.lt_dim_twelve` | verified (standard axioms only) |
 | StealthAudit/Comparisons.lean | `Stealth.cohn_table_lt` | verified (standard axioms only) |
+| StealthAudit/DetOneTrace.lean | `Stealth.trace_mul_self_eq_sum_sq` | verified (standard axioms only) |
+| StealthAudit/DetOneTrace.lean | `Stealth.frobSq_eq_trace_mul_self` | verified (standard axioms only) |
+| StealthAudit/DetOneTrace.lean | `Stealth.trace_sub_one_eq` | verified (standard axioms only) |
+| StealthAudit/DetOneTrace.lean | `Stealth.frobSq_sub_one_eq` | verified (standard axioms only) |
+| StealthAudit/DetOneTrace.lean | `Stealth.sum_log_eigenvalues_eq_zero` | verified (standard axioms only) |
+| StealthAudit/DetOneTrace.lean | `Stealth.trace_sub_one_nonneg` | verified (standard axioms only) |
+| StealthAudit/DetOneTrace.lean | `Stealth.trace_sub_one_le_two_frobSq` | verified (standard axioms only) |
 | StealthAudit/DistinctRows.lean | `Stealth.exists_col_mem_of_card_lt` | verified (standard axioms only) |
 | StealthAudit/DistinctRows.lean | `Stealth.eq_of_sub_eq_two_mul_int` | verified (standard axioms only) |
 | StealthAudit/DistinctRows.lean | `Stealth.distinctModPeriod_antipodalMotif` | verified (standard axioms only) |

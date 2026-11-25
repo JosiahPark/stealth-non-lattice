@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 03:52 UTC",
-  "commit": "1cd57bd57680be017796562bc10c37d84674fed1",
+  "checked_at": "2026-11-25 03:58 UTC",
+  "commit": "e053b2ee1803461cf9e28ca62a2d9c5e2cd1c9fb",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 228,
-  "verified": 228,
+  "theorems": 235,
+  "verified": 235,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -781,6 +781,76 @@
     {
       "file": "StealthAudit/Comparisons.lean",
       "theorem": "Stealth.cohn_table_lt",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/DetOneTrace.lean",
+      "theorem": "Stealth.trace_mul_self_eq_sum_sq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/DetOneTrace.lean",
+      "theorem": "Stealth.frobSq_eq_trace_mul_self",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/DetOneTrace.lean",
+      "theorem": "Stealth.trace_sub_one_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/DetOneTrace.lean",
+      "theorem": "Stealth.frobSq_sub_one_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/DetOneTrace.lean",
+      "theorem": "Stealth.sum_log_eigenvalues_eq_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/DetOneTrace.lean",
+      "theorem": "Stealth.trace_sub_one_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/DetOneTrace.lean",
+      "theorem": "Stealth.trace_sub_one_le_two_frobSq",
       "axioms": [
         "propext",
         "Classical.choice",
