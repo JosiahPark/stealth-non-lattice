@@ -252,9 +252,10 @@ Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
   4 tr F / n`, F3a and F3b; `E ≠ 0` since a scalar `F` with `det (1 + F) = 1` is `0`).
   File `StealthAudit/ReciprocalGram.lean`.
   - Done 2026-11-25 07:20 UTC: `quadForm_add`, `quadForm_one_testVector`, `frobSq_sub_smul_one`, `lemma_6_1`. The norm `‖Q − 1‖` is the Frobenius norm (`frobSq` is its square); the minimum over `V` is stated as the existence of a test vector with `vᵀQv < 4`. This is Lemma 6.1 with no hypothesis beyond the paper's.
-- [ ] F4. Stability of the amplitudes: for fixed `u`, `X ↦ amp X u` is continuous on `ι → Fin n → ℝ`, so a
+- [x] F4. Stability of the amplitudes: for fixed `u`, `X ↦ amp X u` is continuous on `ι → Fin n → ℝ`, so a
   finite set of nonzero amplitudes stays nonzero in a neighbourhood of `X`.
   File `StealthAudit/AmpContinuity.lean`.
+  - Done 2026-11-25 07:35 UTC: `continuous_dot_right`, `continuous_phase_right`, `continuous_amp`, `eventually_amp_ne_zero`. Nothing weakened.
 - [ ] F5. Theorem 1.3 in the marked period model of A3: for a binary motif `C` of strength three with
   `N ≡ 8 (mod 16)`, `n ≥ 4`: there are neighbourhoods of `C` and of `Q = 1` (determinant one, positive
   definite) on which `centerDensityQ X Q ≤ 1/N = centerDensityQ C 1`, with strict inequality when `Q ≠ 1`
