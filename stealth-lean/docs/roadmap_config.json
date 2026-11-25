@@ -54,6 +54,9 @@
   "H2": "formal duality (def)",
   "H3": "ℤⁿ periods of a dual",
   "H4": "integer density",
+  "H4a": "index = |det|",
+  "H4b": "coset counting",
+  "H4c": "density integer",
   "H5": "Prop 7.1"
  },
  "deps": {
@@ -182,8 +185,18 @@
    "H2",
    "H3"
   ],
+  "H4a": [
+   "H2"
+  ],
+  "H4b": [
+   "H4a"
+  ],
+  "H4c": [
+   "H4b",
+   "H3"
+  ],
   "H5": [
-   "H4",
+   "H4c",
    "G3",
    "C5"
   ]
@@ -325,6 +338,9 @@
     "H2",
     "H3",
     "H4",
+    "H4a",
+    "H4b",
+    "H4c",
     "H5"
    ],
    "need": [

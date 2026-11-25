@@ -325,12 +325,28 @@ radius). Proposition 7.1 counts as proved only for that definition, and READMEs 
   `FormallyDual X Q → ∀ u : Fin n → ℤ, ∀ x, mem Q x → mem Q (x + u)`. This follows from (ii) at `t = u`,
   `amp_two_mul` (G3: `a_X(2u) = N`) and `pairCoeff_eq_one_iff` (H1). File `StealthAudit/FormalDualPeriods.lean`.
   - Done 2026-11-25 04:48 UTC: `card_pos_of_formallyDual`, `pairCoeff_int_of_formallyDual`, `int_period_of_formallyDual` (the period is written `x + fun i => (u i : ℝ)`). Nothing weakened; relative to the definition of H2.
-- [ ] H4. The density of a `ℤⁿ`-periodic configuration is an integer. If every integer vector is a period
+- [-] H4. The density of a `ℤⁿ`-periodic configuration is an integer (split into H4a, H4b, H4c). If every integer vector is a period
   of `Q` and `Q − Q ⊆ ½ℤⁿ`, then `∃ m : ℕ, density Q = m`.
   Sketch: `Γ ⊆ ½ℤⁿ`. Let `L = Γ + ℤⁿ`. Then `L/Γ` acts freely on the `M` classes, so `M = [L : Γ] · m`,
   and `|A.det| = [L : Γ] / [L : ℤⁿ]` by `ZLattice.covolume_div_covolume_eq_relIndex` (or
   `AddSubgroup.relIndex_eq_natAbs_det` after scaling by `2`). Split into H4a (counting) and H4b
   (index = determinant) when taken. File `StealthAudit/PeriodicDensity.lean`.
+- [x] H4a. Index = determinant: for `B : Matrix (Fin n) (Fin n) ℤ` with `B.det ≠ 0`,
+  `(LinearMap.range (Matrix.toLin' B)).toAddSubgroup.index = B.det.natAbs`, and `2ℤⁿ` has index `2ⁿ`
+  (from `Submodule.natAbs_det_equiv`). File `StealthAudit/IndexDet.lean`.
+  - Done 2026-11-25 04:56 UTC: `toLin'_injective_of_det_ne_zero`, `index_range_toLin'`, `index_range_two`. Nothing weakened.
+- [ ] H4b. Coset counting: let `H : AddSubgroup (Fin n → ℤ)` with `H.index ≠ 0`, and `r : Fin M → Fin n → ℤ`
+  pairwise distinct modulo `H` (`r l − r k ∈ H → k = l`), such that the union of the cosets `r k + H` is
+  invariant under `2ℤⁿ` (`∀ k v, ∃ l, r k + 2 • v − r l ∈ H`). Then `∃ c : ℕ, 2 ^ n * M = c * H.index`.
+  (With `L = H ⊔ 2ℤⁿ`: the cosets form a union of `L`-cosets, so `H.relIndex L ∣ M`; `L.index ∣ 2ⁿ`
+  by `index_range_two` and `relIndex_mul_index`; `H.index = H.relIndex L * L.index`.)
+  File `StealthAudit/CosetCounting.lean`.
+- [ ] H4c. The density is an integer: for `Q : PeriodicConfig n` such that every `u ∈ ℤⁿ` is a period
+  (`∀ u x, Q.mem x → Q.mem (x + fun i => (u i : ℝ))`, as given by H3) and any two points differ by a
+  vector of `½ℤⁿ` (as given by `formallyDual_support`, H2), `∃ m : ℕ, Q.density = m`. Apply H4b to
+  the integer matrix `B = 2A` (integral because `A eⱼ` is a difference of two points of `Q`), with
+  `H = B ℤⁿ` and `r k = 2 (w k − w 0)`; then `density Q = M / |det A| = 2ⁿ M / |det B| = c` by H4a.
+  File `StealthAudit/PeriodicDensity.lean`.
 - [ ] H5. Proposition 7.1. Prove `proposition_7_1 : IsBinary X → Fintype.card ι = 24 → ¬ FormallyDual X Q`
   for every `n`, because (i) would give `density Q = 2ⁿ/24`, which is not an integer
   (`two_pow_div_twentyfour_not_int`, G3; H3; H4). Add the corollary for the motifs `C_n` of `theorem_1_1`,
