@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 03:23 UTC at commit `706294cd473f`.
+Checked 2026-11-25 03:28 UTC at commit `f2d7e2b952ff`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 203 of 203
+- Theorems verified with standard axioms only: 212 of 212
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -102,6 +102,15 @@ Checked 2026-11-25 03:23 UTC at commit `706294cd473f`.
 | StealthAudit/EqualityDifferences.lean | `Stealth.equality_differences` | verified (standard axioms only) |
 | StealthAudit/EqualityDifferences.lean | `Stealth.distinctModPeriod_of_equality` | verified (standard axioms only) |
 | StealthAudit/EqualityDifferences.lean | `Stealth.even_of_equality` | verified (standard axioms only) |
+| StealthAudit/EqualityPairing.lean | `Stealth.sgn_mul_sgn` | verified (standard axioms only) |
+| StealthAudit/EqualityPairing.lean | `Stealth.sum_sgn_mul_sgn` | verified (standard axioms only) |
+| StealthAudit/EqualityPairing.lean | `Stealth.hamming_eq_iff_antipodal` | verified (standard axioms only) |
+| StealthAudit/EqualityPairing.lean | `Stealth.sum_sgn_mul_sgn_eq_zero` | verified (standard axioms only) |
+| StealthAudit/EqualityPairing.lean | `Stealth.antipodal_symm` | verified (standard axioms only) |
+| StealthAudit/EqualityPairing.lean | `Stealth.not_antipodal_self` | verified (standard axioms only) |
+| StealthAudit/EqualityPairing.lean | `Stealth.antipodal_unique` | verified (standard axioms only) |
+| StealthAudit/EqualityPairing.lean | `Stealth.card_le_of_orthogonal` | verified (standard axioms only) |
+| StealthAudit/EqualityPairing.lean | `Stealth.exists_antipodal_pairing` | verified (standard axioms only) |
 | StealthAudit/FormalDualityArithmetic.lean | `Stealth.amp_two_mul` | verified (standard axioms only) |
 | StealthAudit/FormalDualityArithmetic.lean | `Stealth.not_twentyfour_dvd_two_pow` | verified (standard axioms only) |
 | StealthAudit/FormalDualityArithmetic.lean | `Stealth.two_pow_div_twentyfour_not_int` | verified (standard axioms only) |

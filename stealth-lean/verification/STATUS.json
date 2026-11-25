@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 03:23 UTC",
-  "commit": "706294cd473f7e155df419ea1c679d3cfe80fd41",
+  "checked_at": "2026-11-25 03:28 UTC",
+  "commit": "f2d7e2b952ff176ccc408050b0c8b6798ab5c71c",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 203,
-  "verified": 203,
+  "theorems": 212,
+  "verified": 212,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -911,6 +911,96 @@
     {
       "file": "StealthAudit/EqualityDifferences.lean",
       "theorem": "Stealth.even_of_equality",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityPairing.lean",
+      "theorem": "Stealth.sgn_mul_sgn",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityPairing.lean",
+      "theorem": "Stealth.sum_sgn_mul_sgn",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityPairing.lean",
+      "theorem": "Stealth.hamming_eq_iff_antipodal",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityPairing.lean",
+      "theorem": "Stealth.sum_sgn_mul_sgn_eq_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityPairing.lean",
+      "theorem": "Stealth.antipodal_symm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityPairing.lean",
+      "theorem": "Stealth.not_antipodal_self",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityPairing.lean",
+      "theorem": "Stealth.antipodal_unique",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityPairing.lean",
+      "theorem": "Stealth.card_le_of_orthogonal",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityPairing.lean",
+      "theorem": "Stealth.exists_antipodal_pairing",
       "axioms": [
         "propext",
         "Classical.choice",
