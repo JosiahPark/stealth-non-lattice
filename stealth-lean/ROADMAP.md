@@ -182,11 +182,12 @@ Theorem 1.2 (items D4–D9) is open.
   points with pairwise orthogonal sign vectors such that every point is in `R` or is the antipode of a
   point of `R`. File `StealthAudit/EqualityPairing.lean`.
   - Done 2026-11-25 04:10 UTC: `sgn`, `hamming`, `Antipodal`, `TwoDistance`, `sgn_mul_sgn`, `sum_sgn_mul_sgn`, `hamming_eq_iff_antipodal`, `sum_sgn_mul_sgn_eq_zero`, `antipodal_symm`, `not_antipodal_self`, `antipodal_unique`, `card_le_of_orthogonal`, `exists_antipodal_pairing`. Nothing weakened.
-- [ ] D8b. The Hadamard matrix: from D8a, index `R` by `Fin n` and let `H r i = 1 − 2 Y (rep r) i ∈ {±1}`
+- [x] D8b. The Hadamard matrix: from D8a, index `R` by `Fin n` and let `H r i = 1 − 2 Y (rep r) i ∈ {±1}`
   (as an integer matrix); then `IsHadamard H` (`H Hᵀ = n I` from the orthogonality of `R`) and
   `e : Fin n × Bool ≃ ι`, `(r, false) ↦ rep r`, `(r, true) ↦` the antipode of `rep r`, is a bijection with
   `Y (e p) = antipodalMotif H id p` for all `p`. This is the statement of D8.
   File `StealthAudit/EqualityHadamard.lean`.
+  - Done 2026-11-25 04:40 UTC: `signRow`, `signRow_cast`, `isHadamard_signRow`, `equality_hadamard` (the statement of D8, with the two-distance hypothesis as `TwoDistance Y` of D8a). Nothing weakened.
 - [ ] D9. Theorem 1.2 assembled: for `n ≥ 3`, a nonempty motif `X` with `Fintype.card ι = 2 * n` has
   `GapAtLeast X 4` if and only if there are `t : Fin n → ℝ`, a Hadamard matrix `H` of order `n`, a
   bijection `e : Fin n × Bool ≃ ι` and integers `z` with
