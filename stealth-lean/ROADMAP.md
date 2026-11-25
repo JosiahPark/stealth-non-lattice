@@ -209,11 +209,12 @@ Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
   binary motif has `Δ_st ≤ 1/24`, with equality exactly for strength three with 24 points, and the value
   `1/24` is attained. File `StealthAudit/BinaryOptimality.lean`.
   - Done 2026-11-24: `centerDensity_le_of_isBinary`, `centerDensity_eq_iff_of_isBinary`, `exists_isBinary_centerDensity_eq`, `twentyfour_le_card_of_hasStrength_three`, `centerDensity_lt_or_hasStrength_three`. "Strength three" is the Fourier form `HasStrength X 3`; repeated points are allowed in the bound.
-- [ ] E3. The last sentence of Theorem 5.1 and the equality statement of Corollary 5.2: under the
+- [x] E3. The last sentence of Theorem 5.1 and the equality statement of Corollary 5.2: under the
   hypotheses of E1, `Δ_st = 1/(2n)` if and only if `X` is, up to a common translation and shifts by
   `2ℤⁿ`, an antipodal Hadamard array in the sense of D9 (from `centerDensity_eq_iff_of_card_lt` of E1,
   `gapAtLeast_iff_le_gapSq` of A2 and D9); for `n = 12`, `N < 79`: `Δ_st = 1/24` exactly for translated
   24-point antipodal Hadamard configurations. File `StealthAudit/BoundedComplexityEquality.lean`.
+  - Done 2026-11-25 05:20 UTC: `IsAntipodalHadamard`, `card_of_isAntipodalHadamard`, `centerDensity_eq_iff_antipodalHadamard`, `centerDensity_eq_iff_antipodalHadamard_dim_twelve`. Nothing weakened.
 
 ## F. Local optimality of the marked configuration
 
