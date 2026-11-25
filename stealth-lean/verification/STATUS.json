@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 05:13 UTC",
-  "commit": "3fea7cc7fb4528089780524cce6306351fd0feb6",
+  "checked_at": "2026-11-25 05:19 UTC",
+  "commit": "9e310fd291fb9bbcacc070621ed3f560133b319f",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 296,
-  "verified": 296,
+  "theorems": 300,
+  "verified": 300,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -2221,6 +2221,46 @@
     {
       "file": "StealthAudit/PivotFactorization.lean",
       "theorem": "Stealth.sum_pivot_eq_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/Proposition71.lean",
+      "theorem": "Stealth.card_mul_density_of_formallyDual",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/Proposition71.lean",
+      "theorem": "Stealth.card_dvd_two_pow_of_formallyDual",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/Proposition71.lean",
+      "theorem": "Stealth.proposition_7_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/Proposition71.lean",
+      "theorem": "Stealth.proposition_7_1_paley",
       "axioms": [
         "propext",
         "Classical.choice",

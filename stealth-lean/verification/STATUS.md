@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 05:13 UTC at commit `3fea7cc7fb45`.
+Checked 2026-11-25 05:19 UTC at commit `9e310fd291fb`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 296 of 296
+- Theorems verified with standard axioms only: 300 of 300
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -233,6 +233,10 @@ Checked 2026-11-25 05:13 UTC at commit `3fea7cc7fb45`.
 | StealthAudit/PivotFactorization.lean | `Stealth.phase_ind_eq_prod` | verified (standard axioms only) |
 | StealthAudit/PivotFactorization.lean | `Stealth.conj_phase_mul_phase_eq` | verified (standard axioms only) |
 | StealthAudit/PivotFactorization.lean | `Stealth.sum_pivot_eq_mul` | verified (standard axioms only) |
+| StealthAudit/Proposition71.lean | `Stealth.card_mul_density_of_formallyDual` | verified (standard axioms only) |
+| StealthAudit/Proposition71.lean | `Stealth.card_dvd_two_pow_of_formallyDual` | verified (standard axioms only) |
+| StealthAudit/Proposition71.lean | `Stealth.proposition_7_1` | verified (standard axioms only) |
+| StealthAudit/Proposition71.lean | `Stealth.proposition_7_1_paley` | verified (standard axioms only) |
 | StealthAudit/RankPrinciple.lean | `Stealth.evalMatrix_apply` | verified (standard axioms only) |
 | StealthAudit/RankPrinciple.lean | `Stealth.conjTranspose_mul_evalMatrix` | verified (standard axioms only) |
 | StealthAudit/RankPrinciple.lean | `Stealth.conjTranspose_mul_evalMatrix_of_orthogonal` | verified (standard axioms only) |
