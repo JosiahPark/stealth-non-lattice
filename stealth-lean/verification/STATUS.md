@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 04:45 UTC at commit `9310c2972159`.
+Checked 2026-11-25 04:51 UTC at commit `b9cef8fa864e`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 284 of 284
+- Theorems verified with standard axioms only: 287 of 287
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -128,6 +128,9 @@ Checked 2026-11-25 04:45 UTC at commit `9310c2972159`.
 | StealthAudit/EqualityPairing.lean | `Stealth.antipodal_unique` | verified (standard axioms only) |
 | StealthAudit/EqualityPairing.lean | `Stealth.card_le_of_orthogonal` | verified (standard axioms only) |
 | StealthAudit/EqualityPairing.lean | `Stealth.exists_antipodal_pairing` | verified (standard axioms only) |
+| StealthAudit/FormalDualPeriods.lean | `Stealth.card_pos_of_formallyDual` | verified (standard axioms only) |
+| StealthAudit/FormalDualPeriods.lean | `Stealth.pairCoeff_int_of_formallyDual` | verified (standard axioms only) |
+| StealthAudit/FormalDualPeriods.lean | `Stealth.int_period_of_formallyDual` | verified (standard axioms only) |
 | StealthAudit/FormalDuality.lean | `Stealth.pairCoeff_of_formallyDual` | verified (standard axioms only) |
 | StealthAudit/FormalDuality.lean | `Stealth.formallyDual_support` | verified (standard axioms only) |
 | StealthAudit/FormalDualityArithmetic.lean | `Stealth.amp_two_mul` | verified (standard axioms only) |

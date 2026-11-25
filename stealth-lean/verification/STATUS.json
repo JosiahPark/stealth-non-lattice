@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 04:45 UTC",
-  "commit": "9310c297215955b2ea04418f12436a2e6cb54e5e",
+  "checked_at": "2026-11-25 04:51 UTC",
+  "commit": "b9cef8fa864e0e875a1f1f9eb3811277e590b248",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 284,
-  "verified": 284,
+  "theorems": 287,
+  "verified": 287,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -1171,6 +1171,36 @@
     {
       "file": "StealthAudit/EqualityPairing.lean",
       "theorem": "Stealth.exists_antipodal_pairing",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/FormalDualPeriods.lean",
+      "theorem": "Stealth.card_pos_of_formallyDual",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/FormalDualPeriods.lean",
+      "theorem": "Stealth.pairCoeff_int_of_formallyDual",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/FormalDualPeriods.lean",
+      "theorem": "Stealth.int_period_of_formallyDual",
       "axioms": [
         "propext",
         "Classical.choice",
