@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 02:27 UTC",
-  "commit": "ae2a1b5192f4263d72c65f929b65f1ac71dfc532",
+  "checked_at": "2026-11-25 02:48 UTC",
+  "commit": "4f886b7250f4a019f035f4b7adf7e953d7361651",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 190,
-  "verified": 190,
+  "theorems": 194,
+  "verified": 194,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -1551,6 +1551,46 @@
     {
       "file": "StealthAudit/PhaseAlgebra.lean",
       "theorem": "Stealth.amp_add_period",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PivotFactorization.lean",
+      "theorem": "Stealth.dot_ind",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PivotFactorization.lean",
+      "theorem": "Stealth.phase_ind_eq_prod",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PivotFactorization.lean",
+      "theorem": "Stealth.conj_phase_mul_phase_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PivotFactorization.lean",
+      "theorem": "Stealth.sum_pivot_eq_mul",
       "axioms": [
         "propext",
         "Classical.choice",
