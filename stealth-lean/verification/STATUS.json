@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 05:27 UTC",
-  "commit": "7312736d1c2236d2ca904a22f54aa893d2ef1ae1",
+  "checked_at": "2026-11-25 06:27 UTC",
+  "commit": "ae716a93cbee5862b425eeef7779702a287ebabc",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 300,
-  "verified": 300,
+  "theorems": 307,
+  "verified": 307,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -444,6 +444,76 @@
     {
       "file": "StealthAudit/BinaryOptimality.lean",
       "theorem": "Stealth.exists_isBinary_centerDensity_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/BinaryParseval.lean",
+      "theorem": "Stealth.dualXorMotif_binary",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/BinaryParseval.lean",
+      "theorem": "Stealth.dualXorMotif_zero_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/BinaryParseval.lean",
+      "theorem": "Stealth.dualXorMotif_sign",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/BinaryParseval.lean",
+      "theorem": "Stealth.charSum_dualXorMotif",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/BinaryParseval.lean",
+      "theorem": "Stealth.dual_injective_of_distinctModPeriod",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/BinaryParseval.lean",
+      "theorem": "Stealth.binary_dual_parseval",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/BinaryParseval.lean",
+      "theorem": "Stealth.binaryDiffCount_sum",
       "axioms": [
         "propext",
         "Classical.choice",
