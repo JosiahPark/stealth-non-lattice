@@ -309,7 +309,7 @@ radius). Proposition 7.1 counts as proved only for that definition, and READMEs 
   `pairCoeff_eq_one_iff : pairCoeff Q t = 1 ↔ ∀ x, mem Q x → mem Q (x + t)`. Both bounds use distinctness:
   each `k` has at most one matching `l`. File `StealthAudit/PeriodicConfig.lean`.
   - Done 2026-11-25 04:34 UTC: `PeriodicConfig` (structure, in namespace `Stealth`), `lat`, `InLattice`, `mem`, `density`, `pairSet`, `pairCoeff`; `lat_zero`, `lat_add`, `lat_neg`, `lat_sub`, `mem_pairSet`, `density_pos`, `pair_unique`, `card_pairSet_image`, `card_pairSet_le`, `card_pairSet_eq_iff`, `pairCoeff_nonneg`, `pairCoeff_le_one`, `pairCoeff_eq_one_iff_card`, `pairCoeff_zero`, `pairCoeff_pos_iff`, `pairCoeff_eq_one_iff` (all `Stealth.PeriodicConfig.*`). Stated as in the item, nothing weakened.
-- [ ] H2. Formal duality with a cubic-period configuration. For a motif `X : ι → Fin n → ℝ` with
+- [x] H2. Formal duality with a cubic-period configuration. For a motif `X : ι → Fin n → ℝ` with
   `DistinctModPeriod X` (so `P = X + 2ℤⁿ`, density `N/2ⁿ`), define `FormallyDual X Q` by three conditions:
   (i) `(N / 2ⁿ) · density Q = 1`;
   (ii) for every `t : Fin n → ℝ`, `pairCoeff Q t = ‖amp X u‖² / N²` when `2t = u ∈ ℤⁿ`, and `0` otherwise;
@@ -320,6 +320,7 @@ radius). Proposition 7.1 counts as proved only for that definition, and READMEs 
   `formallyDual_support : FormallyDual X Q → mem Q x → mem Q y → ∀ i, ∃ z : ℤ, 2 * (y i − x i) = z`.
   The paper says "supported on `ℤⁿ`"; the argument needs only `½ℤⁿ`, which is what (ii) gives.
   File `StealthAudit/FormalDuality.lean`.
+  - Done 2026-11-25 04:42 UTC: `HalfIntVec`, `motifPairCoeff`, `PeriodicConfig.InDual`, `PeriodicConfig.fourierCoeff`, `FormallyDual` (structure: `DistinctModPeriod X` and conditions (i)–(iii)); `pairCoeff_of_formallyDual`, `formallyDual_support`. The pair-coefficient characterization is the definition; its equivalence with the analytic definition of [3] is not formalized (stated in the docstring).
 - [ ] H3. Integer vectors are periods of a formal dual. For binary `X`:
   `FormallyDual X Q → ∀ u : Fin n → ℤ, ∀ x, mem Q x → mem Q (x + u)`. This follows from (ii) at `t = u`,
   `amp_two_mul` (G3: `a_X(2u) = N`) and `pairCoeff_eq_one_iff` (H1). File `StealthAudit/FormalDualPeriods.lean`.
