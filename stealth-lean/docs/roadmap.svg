@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1118" width="960" height="1118" role="img" aria-labelledby="rm-t rm-d" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
-<title id="rm-t">Stealth Hadamard roadmap: 22 of 32 items done</title>
+<title id="rm-t">Stealth Hadamard roadmap: 23 of 32 items done</title>
 <desc id="rm-d">Theorem 1.1: proved; Theorem 1.2: in progress; Theorem 1.3: in progress; Proposition 3.1: proved; Lemma 4.1: proved; Theorem 5.1 · Cor. 5.2: in progress; Theorem 5.3: proved; Lemma 6.1: open; Proposition 7.1: in progress; §7 table: in progress.</desc>
 <style>.bg{fill:#f6f7f4}.band{fill:#e9ebe5}.box{fill:#fff;stroke:#d0d4cc}.tt{font-size:17px;font-weight:600;fill:#1d2430}.sm{font-size:12px;fill:#5d6675}.lbl{font-size:11px;font-weight:600;letter-spacing:.07em;fill:#5d6675}.ref{font-size:11px;fill:#5d6675}.rn{font-size:13px;font-weight:600;fill:#1d2430}.rs{font-size:11px;fill:#5d6675}.st{font-size:11px;font-weight:600;fill:#1d2430}.id{font-family:ui-monospace, Menlo, Consolas, monospace;font-size:11.5px;font-weight:600;fill:#1d2430}.nm{font-family:ui-monospace, Menlo, Consolas, monospace;font-size:11px;fill:#1d2430}.ct{font-size:10px;font-weight:600;letter-spacing:.06em;fill:#5d6675}.ct.nx{fill:#2b4a7a}.next{stroke:#2b4a7a;stroke-width:2}.dash{stroke-dasharray:4 3}.g{fill:#2e8a57}.a{fill:#c48413}.s{fill:#8b93a1}.gs{stroke:#2e8a57}.as{stroke:#c48413}.ss{stroke:#8b93a1}.rg{fill:#d7eedf;stroke:#2e8a57;stroke-width:1.5}.ra{fill:#f7e6c2;stroke:#c48413;stroke-width:1.5}.ro{fill:#e3e6ea;stroke:#8b93a1;stroke-width:1.5;stroke-dasharray:4 3}.ic{fill:none;stroke-width:1.6}.ck{fill:none;stroke:#fff;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}@media (prefers-color-scheme: dark){.bg{fill:#14181f}.band{fill:#1a1f27}.box{fill:#1b2029;stroke:#2e3542}.tt,.rn,.st,.id,.nm{fill:#e4e7ec}.sm,.lbl,.ref,.rs,.ct{fill:#9aa3b2}.ct.nx{fill:#8fb0e6}.next{stroke:#8fb0e6}.g{fill:#5cc08a}.a{fill:#e6a93c}.s{fill:#8e97a6}.gs{stroke:#5cc08a}.as{stroke:#e6a93c}.ss{stroke:#8e97a6}.rg{fill:#1e3a2b;stroke:#5cc08a}.ra{fill:#3d3018;stroke:#e6a93c}.ro{fill:#262c36;stroke:#8e97a6}.ck{stroke:#14181f}}</style>
 <rect class="bg" x="0" y="0" width="960" height="1118"/>
 <text x="20" y="34" class="tt">Stealth Hadamard roadmap</text>
-<text x="20" y="54" class="sm">22 of 32 roadmap items done · 196 of 196 Lean theorems verified, all pass the axiom audit · build 2026-11-25 03:07 UTC</text>
+<text x="20" y="54" class="sm">23 of 32 roadmap items done · 203 of 203 Lean theorems verified, all pass the axiom audit · build 2026-11-25 03:23 UTC</text>
 <circle class="g" cx="26" cy="72" r="6"/><path class="ck" d="M23.2 72.2 l2 2 l3.8 -4.4"/>
 <text x="37" y="76" class="sm">done or proved: compiled, standard axioms only</text>
 <circle class="ic as" cx="359" cy="72" r="5.2"/><path class="a" d="M359 66.8 a5.2 5.2 0 0 0 0 10.4 z"/>
@@ -140,7 +140,7 @@
 <circle class="g" cx="44.0" cy="617" r="5"/><path class="ck" d="M41.2 617.2 l2 2 l3.8 -4.4"/>
 <text x="54.0" y="620.5" class="ct">DONE</text>
 <rect class="band" x="20" y="650" width="920" height="142" rx="6"/>
-<text x="30" y="669" class="lbl">D. THE SHARP CARDINALITY THEOREM · 6 OF 9 DONE</text>
+<text x="30" y="669" class="lbl">D. THE SHARP CARDINALITY THEOREM · 7 OF 9 DONE</text>
 <text x="930" y="669" class="ref" text-anchor="end">§4</text>
 <rect class="box" x="30.0" y="680" width="173.6" height="46" rx="4"/>
 <text x="38.0" y="698" class="id">D1</text>
@@ -172,17 +172,17 @@
 <text x="61.4" y="752" class="nm">unit-modulus system</text>
 <circle class="g" cx="44.0" cy="767" r="5"/><path class="ck" d="M41.2 767.2 l2 2 l3.8 -4.4"/>
 <text x="54.0" y="770.5" class="ct">DONE</text>
-<rect class="box next" x="211.6" y="734" width="173.6" height="46" rx="4"/>
+<rect class="box" x="211.6" y="734" width="173.6" height="46" rx="4"/>
 <text x="219.6" y="752" class="id">D7</text>
 <text x="243.0" y="752" class="nm">differences n/2, n</text>
-<circle class="ic ss" cx="225.6" cy="767" r="4.2"/>
-<text x="235.6" y="770.5" class="ct">OPEN</text>
-<text x="377.2" y="770.5" class="ct nx" text-anchor="end">NEXT</text>
-<rect class="box" x="393.2" y="734" width="173.6" height="46" rx="4"/>
+<circle class="g" cx="225.6" cy="767" r="5"/><path class="ck" d="M222.79999999999998 767.2 l2 2 l3.8 -4.4"/>
+<text x="235.6" y="770.5" class="ct">DONE</text>
+<rect class="box next" x="393.2" y="734" width="173.6" height="46" rx="4"/>
 <text x="401.2" y="752" class="id">D8</text>
 <text x="424.6" y="752" class="nm">to Hadamard matrix</text>
 <circle class="ic ss" cx="407.2" cy="767" r="4.2"/>
 <text x="417.2" y="770.5" class="ct">OPEN</text>
+<text x="558.8" y="770.5" class="ct nx" text-anchor="end">NEXT</text>
 <rect class="box" x="574.8" y="734" width="173.6" height="46" rx="4"/>
 <text x="582.8" y="752" class="id">D9</text>
 <text x="606.2" y="752" class="nm">Thm 1.2 assembled</text>

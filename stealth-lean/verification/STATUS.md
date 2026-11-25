@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 03:07 UTC at commit `65f85cf6dd1a`.
+Checked 2026-11-25 03:23 UTC at commit `706294cd473f`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 196 of 196
+- Theorems verified with standard axioms only: 203 of 203
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -95,6 +95,13 @@ Checked 2026-11-25 03:07 UTC at commit `65f85cf6dd1a`.
 | StealthAudit/DualDistance.lean | `Stealth.stealthRadius_eq_min_four_dualDist` | verified (standard axioms only) |
 | StealthAudit/DualDistance.lean | `Stealth.centerDensity_sq_eq_min_four_dualDist` | verified (standard axioms only) |
 | StealthAudit/DualDistance.lean | `Stealth.centerDensity_eq_min_four_dualDist` | verified (standard axioms only) |
+| StealthAudit/EqualityDifferences.lean | `Stealth.amp_pivot_sub_eq_zero` | verified (standard axioms only) |
+| StealthAudit/EqualityDifferences.lean | `Stealth.pivot_relation` | verified (standard axioms only) |
+| StealthAudit/EqualityDifferences.lean | `Stealth.phase_ind_singleton` | verified (standard axioms only) |
+| StealthAudit/EqualityDifferences.lean | `Stealth.exists_int_of_exp_eq_one_or_neg_one` | verified (standard axioms only) |
+| StealthAudit/EqualityDifferences.lean | `Stealth.equality_differences` | verified (standard axioms only) |
+| StealthAudit/EqualityDifferences.lean | `Stealth.distinctModPeriod_of_equality` | verified (standard axioms only) |
+| StealthAudit/EqualityDifferences.lean | `Stealth.even_of_equality` | verified (standard axioms only) |
 | StealthAudit/FormalDualityArithmetic.lean | `Stealth.amp_two_mul` | verified (standard axioms only) |
 | StealthAudit/FormalDualityArithmetic.lean | `Stealth.not_twentyfour_dvd_two_pow` | verified (standard axioms only) |
 | StealthAudit/FormalDualityArithmetic.lean | `Stealth.two_pow_div_twentyfour_not_int` | verified (standard axioms only) |

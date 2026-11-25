@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 03:07 UTC",
-  "commit": "65f85cf6dd1a7b97931573e39cdc9eba337bb88f",
+  "checked_at": "2026-11-25 03:23 UTC",
+  "commit": "706294cd473f7e155df419ea1c679d3cfe80fd41",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 196,
-  "verified": 196,
+  "theorems": 203,
+  "verified": 203,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -841,6 +841,76 @@
     {
       "file": "StealthAudit/DualDistance.lean",
       "theorem": "Stealth.centerDensity_eq_min_four_dualDist",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityDifferences.lean",
+      "theorem": "Stealth.amp_pivot_sub_eq_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityDifferences.lean",
+      "theorem": "Stealth.pivot_relation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityDifferences.lean",
+      "theorem": "Stealth.phase_ind_singleton",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityDifferences.lean",
+      "theorem": "Stealth.exists_int_of_exp_eq_one_or_neg_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityDifferences.lean",
+      "theorem": "Stealth.equality_differences",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityDifferences.lean",
+      "theorem": "Stealth.distinctModPeriod_of_equality",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityDifferences.lean",
+      "theorem": "Stealth.even_of_equality",
       "axioms": [
         "propext",
         "Classical.choice",
