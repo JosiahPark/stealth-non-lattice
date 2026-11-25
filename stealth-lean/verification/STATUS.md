@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 06:27 UTC at commit `ae716a93cbee`.
+Checked 2026-11-25 06:34 UTC at commit `574b8f60e721`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 307 of 307
+- Theorems verified with standard axioms only: 310 of 310
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -32,6 +32,9 @@ Checked 2026-11-25 06:27 UTC at commit `ae716a93cbee`.
 | StealthAudit/Basic.lean | `Stealth.mem_oddSupp` | verified (standard axioms only) |
 | StealthAudit/Basic.lean | `Stealth.charSum_def` | verified (standard axioms only) |
 | StealthAudit/Basic.lean | `Stealth.antipodalMotif_apply` | verified (standard axioms only) |
+| StealthAudit/BinaryFormalDuality.lean | `Stealth.binaryFormalDual_card_mul` | verified (standard axioms only) |
+| StealthAudit/BinaryFormalDuality.lean | `Stealth.binaryFormalDual_card_dvd` | verified (standard axioms only) |
+| StealthAudit/BinaryFormalDuality.lean | `Stealth.no_binaryFormalDual_of_card_24` | verified (standard axioms only) |
 | StealthAudit/BinaryMotif.lean | `Stealth.exp_pi_int` | verified (standard axioms only) |
 | StealthAudit/BinaryMotif.lean | `Stealth.phase_eq_prod` | verified (standard axioms only) |
 | StealthAudit/BinaryMotif.lean | `Stealth.phase_of_binary` | verified (standard axioms only) |

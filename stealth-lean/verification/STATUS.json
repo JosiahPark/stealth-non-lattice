@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 06:27 UTC",
-  "commit": "ae716a93cbee5862b425eeef7779702a287ebabc",
+  "checked_at": "2026-11-25 06:34 UTC",
+  "commit": "574b8f60e72103b44d79dad36a4a5f7cf0b09a4e",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 307,
-  "verified": 307,
+  "theorems": 310,
+  "verified": 310,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -214,6 +214,36 @@
     {
       "file": "StealthAudit/Basic.lean",
       "theorem": "Stealth.antipodalMotif_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/BinaryFormalDuality.lean",
+      "theorem": "Stealth.binaryFormalDual_card_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/BinaryFormalDuality.lean",
+      "theorem": "Stealth.binaryFormalDual_card_dvd",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/BinaryFormalDuality.lean",
+      "theorem": "Stealth.no_binaryFormalDual_of_card_24",
       "axioms": [
         "propext",
         "Classical.choice",
