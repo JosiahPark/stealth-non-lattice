@@ -142,13 +142,14 @@ Theorem 1.2 (items D4–D9) is open.
   bound**: `K ≥ 1` gives `N ≥ 2n` (frequencies `B_j = {0, e_j} ∪ {e_i, e_i + e_j : i ≠ j}`), for every `n`;
   **Lemma 4.1**: `K > 1` gives `N ≥ 1 + n + n(n−1)/2`. File `StealthAudit/CardinalityBound.lean`.
   - Done 2026-11-24: `two_le_card_of_gapAtLeast_two`, `succ_le_card_of_gapAtLeast_three`, `two_mul_le_card_of_gapAtLeast_four`, `rank_obstruction`, with `pivotSet`, `pivotSet_injective`, `card_sdiff_add_card_sdiff_le_three`. In terms of `stealthRadius`: `two_mul_le_card_of_one_le_stealthRadius`, `rank_obstruction_of_one_lt_stealthRadius` (in `StealthRadius.lean`).
-- [ ] D4. Row orthogonality in the equality case: if `κ` is a finite type with
+- [x] D4. Row orthogonality in the equality case: if `κ` is a finite type with
   `Fintype.card κ = Fintype.card ι`, `ι` nonempty, and `b : κ → Fin n → ℤ` satisfies
   `amp X (b q − b p) = 0` for all `p ≠ q`, then for all `k l : ι`,
   `∑ p, conj (phase (b p) (X k)) * phase (b p) (X l) = if k = l then N else 0`
   (reindex `evalMatrix X b` to a square matrix along `Fintype.equivOfCardEq`; from
   `conjTranspose_mul_evalMatrix_of_orthogonal` of D1, `((N : ℂ)⁻¹ • Mᴴ) * M = 1`, and `mul_eq_one_comm`
   gives `M * ((N : ℂ)⁻¹ • Mᴴ) = 1`). File `StealthAudit/RowOrthogonality.lean`.
+  - Done 2026-11-25 02:40 UTC: `evalMatrix_mul_conjTranspose_of_card_eq`, `sum_conj_phase_mul_phase_of_card_eq`. Stated as in the item, nothing weakened.
 - [ ] D5. The pivot factorization (4): for `x y : Fin n → ℝ`, `j : Fin n`, and `w i = phase (ind {i}) (y − x)`
   (that is, `e^{πi (yᵢ − xᵢ)}`), prove `phase (ind S) (y − x) = ∏ i ∈ S, w i` and
   `∑ p : Fin n × Bool, conj (phase (ind (pivotSet j p)) x) * phase (ind (pivotSet j p)) y`
