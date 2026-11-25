@@ -371,10 +371,11 @@ item must build here before it is ticked.
   `∑ S ∈ univ.powerset, D_Y(S) = (card κ) ^ 2` (`binaryDiffCount_sum`).
   File `StealthAudit/BinaryParseval.lean`.
   - Done 2026-11-25 06:24 UTC: `dualXorMotif`, `dualXorMotif_binary`, `dualXorMotif_zero_iff`, `dualXorMotif_sign`, `charSum_dualXorMotif`, `dual_injective_of_distinctModPeriod`, `binary_dual_parseval`, `binaryDiffCount`, `binaryDiffCount_sum`. Stated as in the item; the candidate code needed two small proof repairs.
-- [ ] I2. Finite binary formal duality: define `IsBinaryFormalDual X Y`. Both motifs are nonempty, binary
+- [x] I2. Finite binary formal duality: define `IsBinaryFormalDual X Y`. Both motifs are nonempty, binary
   and injective, and `card κ * charSum X S ^ 2 = N ^ 2 * D_Y(S)` for every `S`. Prove
   `binaryFormalDual_card_mul : N * card κ = 2 ^ n` (sum over `S`, using I1) and
   `no_binaryFormalDual_of_card_24`. File `StealthAudit/BinaryFormalDuality.lean`.
+  - Done 2026-11-25 06:30 UTC: `IsBinaryFormalDual`, `binaryFormalDual_card_mul`, `binaryFormalDual_card_dvd`, `no_binaryFormalDual_of_card_24`. Stated as in the item; the candidate's final `nlinarith` step was replaced by `linear_combination`.
 - [ ] I3. Change of marked period: if two `PeriodicConfig n` (H1) have the same points
   (`∀ x, Q.mem x ↔ Q'.mem x`), then `Q.pairCoeff t = Q'.pairCoeff t` for every `t`. Proof by common
   refinement: `H = Γ ∩ Γ'` has finite index in both, and each coset of `Γ` splits into `[Γ : H]` cosets
