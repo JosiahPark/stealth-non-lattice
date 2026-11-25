@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-24 22:43 UTC at commit `cfb9c1d2dc00`.
+Checked 2026-11-25 01:27 UTC at commit `16de62d35582`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 168 of 168
+- Theorems verified with standard axioms only: 182 of 182
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -126,6 +126,20 @@ Checked 2026-11-24 22:43 UTC at commit `cfb9c1d2dc00`.
 | StealthAudit/Paley12.lean | `Stealth.paley12_map_sq` | verified (standard axioms only) |
 | StealthAudit/Paley12.lean | `Stealth.paley12_entry` | verified (standard axioms only) |
 | StealthAudit/Paley12.lean | `Stealth.isHadamard_paley12` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.quadForm_eq_quadFormR` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.quadFormR_smul` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.quadFormR_zero` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.continuous_quadFormR` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.quadFormR_pos` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.exists_coercive` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.exists_survives_isMin` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.isLeast_gapQ` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.exists_survives_quadForm_eq_gapQ` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.gapQ_le_of_survives` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.gapQ_pos` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.quadForm_one` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.gapQ_one` | verified (standard axioms only) |
+| StealthAudit/PeriodShape.lean | `Stealth.centerDensityQ_one` | verified (standard axioms only) |
 | StealthAudit/PhaseAlgebra.lean | `Stealth.dot_zero` | verified (standard axioms only) |
 | StealthAudit/PhaseAlgebra.lean | `Stealth.dot_add` | verified (standard axioms only) |
 | StealthAudit/PhaseAlgebra.lean | `Stealth.dot_neg` | verified (standard axioms only) |

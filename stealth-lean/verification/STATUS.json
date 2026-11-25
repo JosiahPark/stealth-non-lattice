@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-24 22:43 UTC",
-  "commit": "cfb9c1d2dc007277f7edf731df449a77cd5c2519",
+  "checked_at": "2026-11-25 01:27 UTC",
+  "commit": "16de62d35582b8586850c1299c44227d577c7723",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 168,
-  "verified": 168,
+  "theorems": 182,
+  "verified": 182,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -1151,6 +1151,146 @@
     {
       "file": "StealthAudit/Paley12.lean",
       "theorem": "Stealth.isHadamard_paley12",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.quadForm_eq_quadFormR",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.quadFormR_smul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.quadFormR_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.continuous_quadFormR",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.quadFormR_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.exists_coercive",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.exists_survives_isMin",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.isLeast_gapQ",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.exists_survives_quadForm_eq_gapQ",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.gapQ_le_of_survives",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.gapQ_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.quadForm_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.gapQ_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodShape.lean",
+      "theorem": "Stealth.centerDensityQ_one",
       "axioms": [
         "propext",
         "Classical.choice",
