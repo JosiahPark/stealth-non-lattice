@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 04:14 UTC",
-  "commit": "a7791a91c7ed55e53111bfad793b393f6d1a7ddf",
+  "checked_at": "2026-11-25 04:17 UTC",
+  "commit": "5cc99547dd82c2f3a61b785bf0fc0053011c8e5c",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 258,
-  "verified": 258,
+  "theorems": 266,
+  "verified": 266,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -2561,6 +2561,86 @@
     {
       "file": "StealthAudit/TraceFreeSign.lean",
       "theorem": "Stealth.exists_testVector_quadForm_neg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/UnitDensityRadius.lean",
+      "theorem": "Stealth.unitRadius_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/UnitDensityRadius.lean",
+      "theorem": "Stealth.unitRadius_pow",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/UnitDensityRadius.lean",
+      "theorem": "Stealth.lt_unitRadius_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/UnitDensityRadius.lean",
+      "theorem": "Stealth.unitRadius_lt_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/UnitDensityRadius.lean",
+      "theorem": "Stealth.unitRadius_ten",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/UnitDensityRadius.lean",
+      "theorem": "Stealth.unitRadius_eleven",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/UnitDensityRadius.lean",
+      "theorem": "Stealth.unitRadius_twelve",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/UnitDensityRadius.lean",
+      "theorem": "Stealth.unitRadius_eq_centerDensity",
       "axioms": [
         "propext",
         "Classical.choice",

@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 04:14 UTC at commit `a7791a91c7ed`.
+Checked 2026-11-25 04:17 UTC at commit `5cc99547dd82`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 258 of 258
+- Theorems verified with standard axioms only: 266 of 266
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -267,5 +267,13 @@ Checked 2026-11-25 04:14 UTC at commit `a7791a91c7ed`.
 | StealthAudit/TraceFreeSign.lean | `Stealth.exists_sign_pattern_neg` | verified (standard axioms only) |
 | StealthAudit/TraceFreeSign.lean | `Stealth.quadForm_two_single` | verified (standard axioms only) |
 | StealthAudit/TraceFreeSign.lean | `Stealth.exists_testVector_quadForm_neg` | verified (standard axioms only) |
+| StealthAudit/UnitDensityRadius.lean | `Stealth.unitRadius_pos` | verified (standard axioms only) |
+| StealthAudit/UnitDensityRadius.lean | `Stealth.unitRadius_pow` | verified (standard axioms only) |
+| StealthAudit/UnitDensityRadius.lean | `Stealth.lt_unitRadius_iff` | verified (standard axioms only) |
+| StealthAudit/UnitDensityRadius.lean | `Stealth.unitRadius_lt_iff` | verified (standard axioms only) |
+| StealthAudit/UnitDensityRadius.lean | `Stealth.unitRadius_ten` | verified (standard axioms only) |
+| StealthAudit/UnitDensityRadius.lean | `Stealth.unitRadius_eleven` | verified (standard axioms only) |
+| StealthAudit/UnitDensityRadius.lean | `Stealth.unitRadius_twelve` | verified (standard axioms only) |
+| StealthAudit/UnitDensityRadius.lean | `Stealth.unitRadius_eq_centerDensity` | verified (standard axioms only) |
 | StealthAudit/UnitRootSystem.lean | `Stealth.eq_neg_one_or_eq_of_unit_system` | verified (standard axioms only) |
 | StealthAudit/UnitRootSystem.lean | `Stealth.unit_system` | verified (standard axioms only) |
