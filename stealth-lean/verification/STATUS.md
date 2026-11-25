@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 04:30 UTC at commit `8850216f3414`.
+Checked 2026-11-25 04:37 UTC at commit `39846f17d45d`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 266 of 266
+- Theorems verified with standard axioms only: 282 of 282
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -179,6 +179,22 @@ Checked 2026-11-25 04:30 UTC at commit `8850216f3414`.
 | StealthAudit/PeriodShape.lean | `Stealth.quadForm_one` | verified (standard axioms only) |
 | StealthAudit/PeriodShape.lean | `Stealth.gapQ_one` | verified (standard axioms only) |
 | StealthAudit/PeriodShape.lean | `Stealth.centerDensityQ_one` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.lat_zero` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.lat_add` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.lat_neg` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.lat_sub` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.mem_pairSet` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.density_pos` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.pair_unique` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.card_pairSet_image` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.card_pairSet_le` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.card_pairSet_eq_iff` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.pairCoeff_nonneg` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.pairCoeff_le_one` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.pairCoeff_eq_one_iff_card` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.pairCoeff_zero` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.pairCoeff_pos_iff` | verified (standard axioms only) |
+| StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.pairCoeff_eq_one_iff` | verified (standard axioms only) |
 | StealthAudit/PhaseAlgebra.lean | `Stealth.dot_zero` | verified (standard axioms only) |
 | StealthAudit/PhaseAlgebra.lean | `Stealth.dot_add` | verified (standard axioms only) |
 | StealthAudit/PhaseAlgebra.lean | `Stealth.dot_neg` | verified (standard axioms only) |

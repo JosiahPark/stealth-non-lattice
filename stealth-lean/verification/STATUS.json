@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 04:30 UTC",
-  "commit": "8850216f3414a5139f5a1d2cac809289ba72cbee",
+  "checked_at": "2026-11-25 04:37 UTC",
+  "commit": "39846f17d45d270c699df3773f3cdcd14d4decce",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 266,
-  "verified": 266,
+  "theorems": 282,
+  "verified": 282,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -1681,6 +1681,166 @@
     {
       "file": "StealthAudit/PeriodShape.lean",
       "theorem": "Stealth.centerDensityQ_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.lat_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.lat_add",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.lat_neg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.lat_sub",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.mem_pairSet",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.density_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.pair_unique",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.card_pairSet_image",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.card_pairSet_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.card_pairSet_eq_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.pairCoeff_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.pairCoeff_le_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.pairCoeff_eq_one_iff_card",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.pairCoeff_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.pairCoeff_pos_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicConfig.lean",
+      "theorem": "Stealth.PeriodicConfig.pairCoeff_eq_one_iff",
       "axioms": [
         "propext",
         "Classical.choice",
