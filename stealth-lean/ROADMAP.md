@@ -218,7 +218,8 @@ Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
 
 ## F. Local optimality of the marked configuration
 
-§6: Lemma 6.1 and Theorem 1.3. Lemma 6.1 is proved (F1–F3c); Theorem 1.3 is open (F4, F5).
+§6: Lemma 6.1 and Theorem 1.3. Lemma 6.1 is proved (F1–F3c); Theorem 1.3 is proved except its last
+sentence, the isolation clause for `n = 12`, `N = 24` (F5a done, F5b open).
 
 - [x] F1. The sign lemma inside Lemma 6.1: let `n ≥ 4` and let `E : Matrix (Fin n) (Fin n) ℝ` be
   symmetric with trace `0` and `E ≠ 0`. Then there is `v` in
@@ -256,11 +257,21 @@ Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
   finite set of nonzero amplitudes stays nonzero in a neighbourhood of `X`.
   File `StealthAudit/AmpContinuity.lean`.
   - Done 2026-11-25 07:35 UTC: `continuous_dot_right`, `continuous_phase_right`, `continuous_amp`, `eventually_amp_ne_zero`. Nothing weakened.
-- [ ] F5. Theorem 1.3 in the marked period model of A3: for a binary motif `C` of strength three with
+- [-] F5. Theorem 1.3 in the marked period model of A3 (split into F5a, F5b): for a binary motif `C` of strength three with
   `N ≡ 8 (mod 16)`, `n ≥ 4`: there are neighbourhoods of `C` and of `Q = 1` (determinant one, positive
   definite) on which `centerDensityQ X Q ≤ 1/N = centerDensityQ C 1`, with strict inequality when `Q ≠ 1`
   (A3, F2, F3, F4). The isolation statement for `n = 12`, `N = 24` needs D9. Split when taken.
   File `StealthAudit/Theorem13.lean`.
+- [x] F5a. Local maximality: for `n ≥ 4` and a binary motif `C` of strength three with `N ≡ 8 (mod 16)`,
+  `centerDensityQ C 1 = 1/N`, and there are a neighbourhood `U` of `C` and `δ > 0` such that every motif
+  `X ∈ U` and period shape `Q` (symmetric positive definite, `det Q = 1`, `frobSq (Q − 1) < δ`) have
+  `centerDensityQ X Q ≤ 1/N`, strictly when `Q ≠ 1`. File `StealthAudit/Theorem13.lean`.
+  - Done 2026-11-25 07:55 UTC: `centerDensityQ_le_of_gapQ_le`, `centerDensityQ_lt_of_gapQ_lt`, `centerDensityQ_one_of_strength_three`, `theorem_1_3`. The period shape enters as `Q` of A3 (the derivation of (3) from a matrix `B` is a remark there); points are counted with multiplicity, so "distinct rows" is not assumed. The isolation clause is F5b.
+- [ ] F5b. The last sentence of Theorem 1.3: for `n = 12`, `N = 24`, the equality case is locally isolated
+  modulo translations, similarities and point relabelling. State precisely: there is a neighbourhood `U` of
+  `C` such that every `X ∈ U` with `centerDensityQ X 1 = 1/24` is a common translate of `C` up to relabelling
+  and shifts by `2ℤ¹²` (from E3 / D9: such `X` is a translated antipodal Hadamard array; the finitely many
+  labelled antipodal arrays near `C` are translates of `C`). File `StealthAudit/Theorem13Isolation.lean`.
 
 ## G. Formal duality and numerical comparisons
 
