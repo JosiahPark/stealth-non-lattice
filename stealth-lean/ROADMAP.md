@@ -127,8 +127,8 @@ vanish (the Fourier form of "orthogonal array of strength `t`").
 
 ## D. The sharp cardinality theorem
 
-§4: Theorem 1.2 and Lemma 4.1. The bound `N ≥ 2n` and Lemma 4.1 are proved; the equality case of
-Theorem 1.2 (items D4–D9) is open.
+§4: Theorem 1.2 and Lemma 4.1. The bound `N ≥ 2n` and Lemma 4.1 are proved (D3); the equality case of
+Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
 
 - [x] D1. Rank principle: for frequencies `b : κ → ℤⁿ` with `a_X(b q − b p) = 0` for all `p ≠ q`, the
   evaluation columns `(e^{πi (b p)·x})_x` are mutually orthogonal of squared norm `N`, so `|κ| ≤ N` for a
@@ -188,12 +188,13 @@ Theorem 1.2 (items D4–D9) is open.
   `Y (e p) = antipodalMotif H id p` for all `p`. This is the statement of D8.
   File `StealthAudit/EqualityHadamard.lean`.
   - Done 2026-11-25 04:40 UTC: `signRow`, `signRow_cast`, `isHadamard_signRow`, `equality_hadamard` (the statement of D8, with the two-distance hypothesis as `TwoDistance Y` of D8a). Nothing weakened.
-- [ ] D9. Theorem 1.2 assembled: for `n ≥ 3`, a nonempty motif `X` with `Fintype.card ι = 2 * n` has
+- [x] D9. Theorem 1.2 assembled: for `n ≥ 3`, a nonempty motif `X` with `Fintype.card ι = 2 * n` has
   `GapAtLeast X 4` if and only if there are `t : Fin n → ℝ`, a Hadamard matrix `H` of order `n`, a
   bijection `e : Fin n × Bool ≃ ι` and integers `z` with
   `X (e p) i = t i + antipodalMotif H id p i + 2 * z p i` (forward: D7, D8 after translating `X k₀` to the
   origin and reducing modulo 2; backward: `gapAtLeast_four_antipodalMotif` of C2, `gapAtLeast_translate`
   and `amp_add_period` of A1). File `StealthAudit/Theorem12.lean`.
+  - Done 2026-11-25 05:05 UTC: `theorem_1_2_forward`, `theorem_1_2_backward`, `theorem_1_2`. Stated as in the item; the backward direction holds for every `n`. With D3 this is Theorem 1.2 for `n ≥ 3`, with no hypothesis beyond the paper's.
 
 ## E. Optimality consequences
 
