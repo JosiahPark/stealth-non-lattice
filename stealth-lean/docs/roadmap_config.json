@@ -39,6 +39,9 @@
   "F1": "trace-free sign",
   "F2": "test amplitudes",
   "F3": "Lemma 6.1",
+  "F3a": "tr F = O(|F|²)",
+  "F3b": "trace-free constant",
+  "F3c": "Lemma 6.1 assembled",
   "F4": "amp continuity",
   "F5": "Thm 1.3",
   "G1": "table ratios",
@@ -124,10 +127,20 @@
   "F3": [
    "F1"
   ],
+  "F3a": [
+   "A3"
+  ],
+  "F3b": [
+   "F1"
+  ],
+  "F3c": [
+   "F3a",
+   "F3b"
+  ],
   "F5": [
    "A3",
    "F2",
-   "F3",
+   "F3c",
    "F4"
   ],
   "G2": [
@@ -187,6 +200,7 @@
     "A3",
     "F2",
     "F3",
+    "F3c",
     "F4",
     "F5"
    ],
@@ -251,10 +265,13 @@
    "sub": "strict reciprocal-Gram maximum",
    "items": [
     "F1",
-    "F3"
+    "F3",
+    "F3a",
+    "F3b",
+    "F3c"
    ],
    "need": [
-    "F3"
+    "F3c"
    ]
   },
   {

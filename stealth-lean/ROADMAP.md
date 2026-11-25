@@ -233,11 +233,24 @@ Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
   `amp_two_mul_single` of B1; for `|I| = 4`: `amp_of_isBinary` with `oddSupp v = I`, then
   `charSum_ne_zero_of_card_mod_sixteen` of B3). File `StealthAudit/TestAmplitudes.lean`.
   - Done 2026-11-25 06:00 UTC: `oddSupp_eq_of_testVector`, `amp_testVector_ne_zero`, `testVector_ne_zero`, `survives_of_mem_testVectors`. The hypothesis `n ≥ 4` is not needed.
-- [ ] F3. Lemma 6.1 (strict reciprocal-Gram maximum): with `m Q = ⨅ v ∈ testVectors n, vᵀ Q v` (a minimum
+- [-] F3. Lemma 6.1 (strict reciprocal-Gram maximum) (split into F3a, F3b, F3c): with `m Q = ⨅ v ∈ testVectors n, vᵀ Q v` (a minimum
   over a finite set), there is `δ > 0` such that every symmetric positive definite `Q` with `det Q = 1`
   and `0 < ‖Q − 1‖ < δ` has `m Q < 4`, and `m 1 = 4`. (F1, compactness of the unit sphere of trace-free
   symmetric matrices for the constant `c_n`, and `tr F = O(‖F‖²)` from `det (1 + F) = 1`.) Split when
   taken. File `StealthAudit/ReciprocalGram.lean`.
+- [x] F3a. The trace estimate: for real symmetric positive definite `Q` with `det Q = 1`, `F = Q − 1` and
+  `‖F‖² = ∑ᵢⱼ Fᵢⱼ²` (`frobSq`): `tr F ≥ 0`, and `tr F ≤ 2 ‖F‖²` when `‖F‖² ≤ 1/4` (eigenvalues `λᵢ`,
+  `∑ log λᵢ = 0`, `log λ ≤ λ − 1`, `1 − 1/λ ≤ log λ`). File `StealthAudit/DetOneTrace.lean`.
+  - Done 2026-11-25 06:30 UTC: `frobSq`, `trace_mul_self_eq_sum_sq`, `frobSq_eq_trace_mul_self`, `trace_sub_one_eq`, `frobSq_sub_one_eq`, `sum_log_eigenvalues_eq_zero`, `trace_sub_one_nonneg`, `trace_sub_one_le_two_frobSq`. Nothing weakened.
+- [ ] F3b. The constant `c_n`: for `n ≥ 4` there is `c > 0` such that every real symmetric trace-free `E`
+  has a test vector `v` (F1) with `quadForm E v ≤ −c · √(frobSq E)` (F1 on the compact unit sphere
+  `{E symmetric, tr E = 0, frobSq E = 1}`, the minimum over the finitely many test vectors being continuous
+  and negative there; homogeneity). File `StealthAudit/TraceFreeConstant.lean`.
+- [ ] F3c. Lemma 6.1 assembled: every test vector has `quadForm 1 v = 4`; there is `δ > 0` such that every
+  real symmetric positive definite `Q` with `det Q = 1` and `0 < frobSq (Q − 1) < δ` has a test vector
+  with `quadForm Q v < 4` (write `Q = 1 + F`, `F = E + (tr F / n) 1`; `quadForm Q v = 4 + quadForm E v +
+  4 tr F / n`, F3a and F3b; `E ≠ 0` since a scalar `F` with `det (1 + F) = 1` is `0`).
+  File `StealthAudit/ReciprocalGram.lean`.
 - [ ] F4. Stability of the amplitudes: for fixed `u`, `X ↦ amp X u` is continuous on `ι → Fin n → ℝ`, so a
   finite set of nonzero amplitudes stays nonzero in a neighbourhood of `X`.
   File `StealthAudit/AmpContinuity.lean`.
