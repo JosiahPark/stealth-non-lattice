@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 04:02 UTC",
-  "commit": "7748637ee52667f3d1c9d7938736b088ab46b5df",
+  "checked_at": "2026-11-25 04:04 UTC",
+  "commit": "2fba6dcae6b2622d68976ad9d2f51697c6601449",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 243,
-  "verified": 243,
+  "theorems": 247,
+  "verified": 247,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -1931,6 +1931,46 @@
     {
       "file": "StealthAudit/RankPrinciple.lean",
       "theorem": "Stealth.card_le_card_of_gapAtLeast",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/ReciprocalGram.lean",
+      "theorem": "Stealth.quadForm_add",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/ReciprocalGram.lean",
+      "theorem": "Stealth.quadForm_one_testVector",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/ReciprocalGram.lean",
+      "theorem": "Stealth.frobSq_sub_smul_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/ReciprocalGram.lean",
+      "theorem": "Stealth.lemma_6_1",
       "axioms": [
         "propext",
         "Classical.choice",

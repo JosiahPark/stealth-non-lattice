@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 04:02 UTC at commit `7748637ee526`.
+Checked 2026-11-25 04:04 UTC at commit `2fba6dcae6b2`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 243 of 243
+- Theorems verified with standard axioms only: 247 of 247
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -204,6 +204,10 @@ Checked 2026-11-25 04:02 UTC at commit `7748637ee526`.
 | StealthAudit/RankPrinciple.lean | `Stealth.conjTranspose_mul_evalMatrix_of_orthogonal` | verified (standard axioms only) |
 | StealthAudit/RankPrinciple.lean | `Stealth.card_le_card_of_orthogonal` | verified (standard axioms only) |
 | StealthAudit/RankPrinciple.lean | `Stealth.card_le_card_of_gapAtLeast` | verified (standard axioms only) |
+| StealthAudit/ReciprocalGram.lean | `Stealth.quadForm_add` | verified (standard axioms only) |
+| StealthAudit/ReciprocalGram.lean | `Stealth.quadForm_one_testVector` | verified (standard axioms only) |
+| StealthAudit/ReciprocalGram.lean | `Stealth.frobSq_sub_smul_one` | verified (standard axioms only) |
+| StealthAudit/ReciprocalGram.lean | `Stealth.lemma_6_1` | verified (standard axioms only) |
 | StealthAudit/RowOrthogonality.lean | `Stealth.evalMatrix_mul_conjTranspose_of_card_eq` | verified (standard axioms only) |
 | StealthAudit/RowOrthogonality.lean | `Stealth.sum_conj_phase_mul_phase_of_card_eq` | verified (standard axioms only) |
 | StealthAudit/StealthRadius.lean | `Stealth.sqNorm_eq_zero_iff` | verified (standard axioms only) |
