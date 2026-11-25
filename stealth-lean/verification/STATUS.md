@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 03:58 UTC at commit `e053b2ee1803`.
+Checked 2026-11-25 04:02 UTC at commit `7748637ee526`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 235 of 235
+- Theorems verified with standard axioms only: 243 of 243
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -241,6 +241,14 @@ Checked 2026-11-25 03:58 UTC at commit `e053b2ee1803`.
 | StealthAudit/Theorem12.lean | `Stealth.theorem_1_2_backward` | verified (standard axioms only) |
 | StealthAudit/Theorem12.lean | `Stealth.theorem_1_2_forward` | verified (standard axioms only) |
 | StealthAudit/Theorem12.lean | `Stealth.theorem_1_2` | verified (standard axioms only) |
+| StealthAudit/TraceFreeConstant.lean | `Stealth.mem_testFinset` | verified (standard axioms only) |
+| StealthAudit/TraceFreeConstant.lean | `Stealth.testFinset_nonempty` | verified (standard axioms only) |
+| StealthAudit/TraceFreeConstant.lean | `Stealth.quadForm_smul` | verified (standard axioms only) |
+| StealthAudit/TraceFreeConstant.lean | `Stealth.frobSq_smul` | verified (standard axioms only) |
+| StealthAudit/TraceFreeConstant.lean | `Stealth.entry_sq_le_frobSq` | verified (standard axioms only) |
+| StealthAudit/TraceFreeConstant.lean | `Stealth.frobSq_pos` | verified (standard axioms only) |
+| StealthAudit/TraceFreeConstant.lean | `Stealth.continuous_quadForm_left` | verified (standard axioms only) |
+| StealthAudit/TraceFreeConstant.lean | `Stealth.exists_trace_free_constant` | verified (standard axioms only) |
 | StealthAudit/TraceFreeSign.lean | `Stealth.exists_sign_pattern_neg` | verified (standard axioms only) |
 | StealthAudit/TraceFreeSign.lean | `Stealth.quadForm_two_single` | verified (standard axioms only) |
 | StealthAudit/TraceFreeSign.lean | `Stealth.exists_testVector_quadForm_neg` | verified (standard axioms only) |

@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 03:58 UTC",
-  "commit": "e053b2ee1803461cf9e28ca62a2d9c5e2cd1c9fb",
+  "checked_at": "2026-11-25 04:02 UTC",
+  "commit": "7748637ee52667f3d1c9d7938736b088ab46b5df",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 235,
-  "verified": 235,
+  "theorems": 243,
+  "verified": 243,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -2301,6 +2301,86 @@
     {
       "file": "StealthAudit/Theorem12.lean",
       "theorem": "Stealth.theorem_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TraceFreeConstant.lean",
+      "theorem": "Stealth.mem_testFinset",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TraceFreeConstant.lean",
+      "theorem": "Stealth.testFinset_nonempty",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TraceFreeConstant.lean",
+      "theorem": "Stealth.quadForm_smul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TraceFreeConstant.lean",
+      "theorem": "Stealth.frobSq_smul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TraceFreeConstant.lean",
+      "theorem": "Stealth.entry_sq_le_frobSq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TraceFreeConstant.lean",
+      "theorem": "Stealth.frobSq_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TraceFreeConstant.lean",
+      "theorem": "Stealth.continuous_quadForm_left",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/TraceFreeConstant.lean",
+      "theorem": "Stealth.exists_trace_free_constant",
       "axioms": [
         "propext",
         "Classical.choice",
