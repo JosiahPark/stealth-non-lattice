@@ -300,7 +300,7 @@ These items use instead the pair-correlation characterization of formal duality 
 configurations from [3], which is taken as the DEFINITION (in the same way formula (2) defines the stealth
 radius). Proposition 7.1 counts as proved only for that definition, and READMEs must say so.
 
-- [ ] H1. Simple periodic configurations and their pair coefficients. A `PeriodicConfig n` is a matrix
+- [x] H1. Simple periodic configurations and their pair coefficients. A `PeriodicConfig n` is a matrix
   `A : Matrix (Fin n) (Fin n) ℝ` with `A.det ≠ 0`, together with `M > 0` representatives
   `w : Fin M → Fin n → ℝ` that are distinct modulo `Γ = {A.mulVec z | z : Fin n → ℤ}`. Define:
   membership `mem Q x ↔ ∃ k z, x = w k + A.mulVec z`; `density Q = M / |A.det|`; and
@@ -308,6 +308,7 @@ radius). Proposition 7.1 counts as proved only for that definition, and READMEs 
   `pairCoeff_le_one`, `pairCoeff_pos_iff : 0 < pairCoeff Q t ↔ ∃ x y, mem Q x ∧ mem Q y ∧ y − x = t`, and
   `pairCoeff_eq_one_iff : pairCoeff Q t = 1 ↔ ∀ x, mem Q x → mem Q (x + t)`. Both bounds use distinctness:
   each `k` has at most one matching `l`. File `StealthAudit/PeriodicConfig.lean`.
+  - Done 2026-11-25 04:34 UTC: `PeriodicConfig` (structure, in namespace `Stealth`), `lat`, `InLattice`, `mem`, `density`, `pairSet`, `pairCoeff`; `lat_zero`, `lat_add`, `lat_neg`, `lat_sub`, `mem_pairSet`, `density_pos`, `pair_unique`, `card_pairSet_image`, `card_pairSet_le`, `card_pairSet_eq_iff`, `pairCoeff_nonneg`, `pairCoeff_le_one`, `pairCoeff_eq_one_iff_card`, `pairCoeff_zero`, `pairCoeff_pos_iff`, `pairCoeff_eq_one_iff` (all `Stealth.PeriodicConfig.*`). Stated as in the item, nothing weakened.
 - [ ] H2. Formal duality with a cubic-period configuration. For a motif `X : ι → Fin n → ℝ` with
   `DistinctModPeriod X` (so `P = X + 2ℤⁿ`, density `N/2ⁿ`), define `FormallyDual X Q` by three conditions:
   (i) `(N / 2ⁿ) · density Q = 1`;
