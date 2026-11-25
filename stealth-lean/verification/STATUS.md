@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 04:51 UTC at commit `b9cef8fa864e`.
+Checked 2026-11-25 04:59 UTC at commit `0761d75b1002`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 287 of 287
+- Theorems verified with standard axioms only: 290 of 290
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -142,6 +142,9 @@ Checked 2026-11-25 04:51 UTC at commit `b9cef8fa864e`.
 | StealthAudit/Hadamard.lean | `Stealth.IsHadamard.transpose_mul` | verified (standard axioms only) |
 | StealthAudit/Hadamard.lean | `Stealth.IsHadamard.two_mul_card_ne` | verified (standard axioms only) |
 | StealthAudit/Hadamard.lean | `Stealth.IsHadamard.two_mul_card_eq` | verified (standard axioms only) |
+| StealthAudit/IndexDet.lean | `Stealth.toLin'_injective_of_det_ne_zero` | verified (standard axioms only) |
+| StealthAudit/IndexDet.lean | `Stealth.index_range_toLin'` | verified (standard axioms only) |
+| StealthAudit/IndexDet.lean | `Stealth.index_range_two` | verified (standard axioms only) |
 | StealthAudit/Indicator.lean | `Stealth.sqNorm_nonneg` | verified (standard axioms only) |
 | StealthAudit/Indicator.lean | `Stealth.sqNorm_ind_sub_ind` | verified (standard axioms only) |
 | StealthAudit/Indicator.lean | `Stealth.sqNorm_ind` | verified (standard axioms only) |

@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 04:51 UTC",
-  "commit": "b9cef8fa864e0e875a1f1f9eb3811277e590b248",
+  "checked_at": "2026-11-25 04:59 UTC",
+  "commit": "0761d75b10021801af1c980e3481c618249d10fd",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 287,
-  "verified": 287,
+  "theorems": 290,
+  "verified": 290,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -1311,6 +1311,36 @@
     {
       "file": "StealthAudit/Hadamard.lean",
       "theorem": "Stealth.IsHadamard.two_mul_card_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/IndexDet.lean",
+      "theorem": "Stealth.toLin'_injective_of_det_ne_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/IndexDet.lean",
+      "theorem": "Stealth.index_range_toLin'",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/IndexDet.lean",
+      "theorem": "Stealth.index_range_two",
       "axioms": [
         "propext",
         "Classical.choice",
