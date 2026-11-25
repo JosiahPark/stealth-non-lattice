@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 05:06 UTC at commit `76629e1ea902`.
+Checked 2026-11-25 05:13 UTC at commit `3fea7cc7fb45`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 294 of 294
+- Theorems verified with standard axioms only: 296 of 296
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -207,6 +207,8 @@ Checked 2026-11-25 05:06 UTC at commit `76629e1ea902`.
 | StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.pairCoeff_zero` | verified (standard axioms only) |
 | StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.pairCoeff_pos_iff` | verified (standard axioms only) |
 | StealthAudit/PeriodicConfig.lean | `Stealth.PeriodicConfig.pairCoeff_eq_one_iff` | verified (standard axioms only) |
+| StealthAudit/PeriodicDensity.lean | `Stealth.PeriodicConfig.lat_single` | verified (standard axioms only) |
+| StealthAudit/PeriodicDensity.lean | `Stealth.PeriodicConfig.density_eq_nat` | verified (standard axioms only) |
 | StealthAudit/PhaseAlgebra.lean | `Stealth.dot_zero` | verified (standard axioms only) |
 | StealthAudit/PhaseAlgebra.lean | `Stealth.dot_add` | verified (standard axioms only) |
 | StealthAudit/PhaseAlgebra.lean | `Stealth.dot_neg` | verified (standard axioms only) |

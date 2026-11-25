@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 05:06 UTC",
-  "commit": "76629e1ea902a98d629f90171055df7396ee0873",
+  "checked_at": "2026-11-25 05:13 UTC",
+  "commit": "3fea7cc7fb4528089780524cce6306351fd0feb6",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 294,
-  "verified": 294,
+  "theorems": 296,
+  "verified": 296,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -1961,6 +1961,26 @@
     {
       "file": "StealthAudit/PeriodicConfig.lean",
       "theorem": "Stealth.PeriodicConfig.pairCoeff_eq_one_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicDensity.lean",
+      "theorem": "Stealth.PeriodicConfig.lat_single",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/PeriodicDensity.lean",
+      "theorem": "Stealth.PeriodicConfig.density_eq_nat",
       "axioms": [
         "propext",
         "Classical.choice",
