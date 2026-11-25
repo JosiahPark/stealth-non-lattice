@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 03:38 UTC at commit `16cb74e1cb8b`.
+Checked 2026-11-25 03:43 UTC at commit `c216d73cc5c2`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 215 of 215
+- Theorems verified with standard axioms only: 218 of 218
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -224,5 +224,8 @@ Checked 2026-11-25 03:38 UTC at commit `16cb74e1cb8b`.
 | StealthAudit/Theorem11.lean | `Stealth.card_paley_index` | verified (standard axioms only) |
 | StealthAudit/Theorem11.lean | `Stealth.paley_configuration` | verified (standard axioms only) |
 | StealthAudit/Theorem11.lean | `Stealth.theorem_1_1` | verified (standard axioms only) |
+| StealthAudit/Theorem12.lean | `Stealth.theorem_1_2_backward` | verified (standard axioms only) |
+| StealthAudit/Theorem12.lean | `Stealth.theorem_1_2_forward` | verified (standard axioms only) |
+| StealthAudit/Theorem12.lean | `Stealth.theorem_1_2` | verified (standard axioms only) |
 | StealthAudit/UnitRootSystem.lean | `Stealth.eq_neg_one_or_eq_of_unit_system` | verified (standard axioms only) |
 | StealthAudit/UnitRootSystem.lean | `Stealth.unit_system` | verified (standard axioms only) |
