@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 01:27 UTC at commit `16de62d35582`.
+Checked 2026-11-25 01:30 UTC at commit `ffd9bd5996fb`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 182 of 182
+- Theorems verified with standard axioms only: 188 of 188
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -89,6 +89,12 @@ Checked 2026-11-25 01:27 UTC at commit `16de62d35582`.
 | StealthAudit/DistinctRows.lean | `Stealth.exists_col_mem_of_card_lt` | verified (standard axioms only) |
 | StealthAudit/DistinctRows.lean | `Stealth.eq_of_sub_eq_two_mul_int` | verified (standard axioms only) |
 | StealthAudit/DistinctRows.lean | `Stealth.distinctModPeriod_antipodalMotif` | verified (standard axioms only) |
+| StealthAudit/DualDistance.lean | `Stealth.hasStrength_iff_lt_dualDist` | verified (standard axioms only) |
+| StealthAudit/DualDistance.lean | `Stealth.gapSq_eq_min_four_dualDist` | verified (standard axioms only) |
+| StealthAudit/DualDistance.lean | `Stealth.gapSq_eq_toNat_min_four_dualDist` | verified (standard axioms only) |
+| StealthAudit/DualDistance.lean | `Stealth.stealthRadius_eq_min_four_dualDist` | verified (standard axioms only) |
+| StealthAudit/DualDistance.lean | `Stealth.centerDensity_sq_eq_min_four_dualDist` | verified (standard axioms only) |
+| StealthAudit/DualDistance.lean | `Stealth.centerDensity_eq_min_four_dualDist` | verified (standard axioms only) |
 | StealthAudit/FormalDualityArithmetic.lean | `Stealth.amp_two_mul` | verified (standard axioms only) |
 | StealthAudit/FormalDualityArithmetic.lean | `Stealth.not_twentyfour_dvd_two_pow` | verified (standard axioms only) |
 | StealthAudit/FormalDualityArithmetic.lean | `Stealth.two_pow_div_twentyfour_not_int` | verified (standard axioms only) |

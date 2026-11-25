@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 01:27 UTC",
-  "commit": "16de62d35582b8586850c1299c44227d577c7723",
+  "checked_at": "2026-11-25 01:30 UTC",
+  "commit": "ffd9bd5996fb6e8eb250f851a2913d2dbcb666d0",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 182,
-  "verified": 182,
+  "theorems": 188,
+  "verified": 188,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -781,6 +781,66 @@
     {
       "file": "StealthAudit/DistinctRows.lean",
       "theorem": "Stealth.distinctModPeriod_antipodalMotif",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/DualDistance.lean",
+      "theorem": "Stealth.hasStrength_iff_lt_dualDist",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/DualDistance.lean",
+      "theorem": "Stealth.gapSq_eq_min_four_dualDist",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/DualDistance.lean",
+      "theorem": "Stealth.gapSq_eq_toNat_min_four_dualDist",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/DualDistance.lean",
+      "theorem": "Stealth.stealthRadius_eq_min_four_dualDist",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/DualDistance.lean",
+      "theorem": "Stealth.centerDensity_sq_eq_min_four_dualDist",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/DualDistance.lean",
+      "theorem": "Stealth.centerDensity_eq_min_four_dualDist",
       "axioms": [
         "propext",
         "Classical.choice",
