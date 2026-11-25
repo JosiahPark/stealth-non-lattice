@@ -342,12 +342,13 @@ radius). Proposition 7.1 counts as proved only for that definition, and READMEs 
   by `index_range_two` and `relIndex_mul_index`; `H.index = H.relIndex L * L.index`.)
   File `StealthAudit/CosetCounting.lean`.
   - Done 2026-11-25 05:03 UTC: `twoZ`, `mem_twoZ`, `card_fiber`, `relIndex_dvd_card`, `two_pow_mul_card_eq`. Proved without the hypothesis `H.index ≠ 0`.
-- [ ] H4c. The density is an integer: for `Q : PeriodicConfig n` such that every `u ∈ ℤⁿ` is a period
+- [x] H4c. The density is an integer: for `Q : PeriodicConfig n` such that every `u ∈ ℤⁿ` is a period
   (`∀ u x, Q.mem x → Q.mem (x + fun i => (u i : ℝ))`, as given by H3) and any two points differ by a
   vector of `½ℤⁿ` (as given by `formallyDual_support`, H2), `∃ m : ℕ, Q.density = m`. Apply H4b to
   the integer matrix `B = 2A` (integral because `A eⱼ` is a difference of two points of `Q`), with
   `H = B ℤⁿ` and `r k = 2 (w k − w 0)`; then `density Q = M / |det A| = 2ⁿ M / |det B| = c` by H4a.
   File `StealthAudit/PeriodicDensity.lean`.
+  - Done 2026-11-25 05:10 UTC: `PeriodicConfig.lat_single`, `PeriodicConfig.density_eq_nat`. Stated as in the item, nothing weakened. With H4a and H4b this completes H4.
 - [ ] H5. Proposition 7.1. Prove `proposition_7_1 : IsBinary X → Fintype.card ι = 24 → ¬ FormallyDual X Q`
   for every `n`, because (i) would give `density Q = 2ⁿ/24`, which is not an integer
   (`two_pow_div_twentyfour_not_int`, G3; H3; H4). Add the corollary for the motifs `C_n` of `theorem_1_1`,
