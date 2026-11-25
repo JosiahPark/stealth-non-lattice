@@ -168,7 +168,7 @@ Theorem 1.2 (items D4–D9) is open.
   `e^{πi d} = ±1` forces `d ∈ ℤ` with the matching parity). In particular the points are distinct modulo
   `2ℤⁿ`, and `n` is even when `N > 2`. File `StealthAudit/EqualityDifferences.lean`.
   - Done 2026-11-25 03:50 UTC: `amp_pivot_sub_eq_zero`, `pivot_relation`, `phase_ind_singleton`, `exists_int_of_exp_eq_one_or_neg_one`, `equality_differences`, `distinctModPeriod_of_equality`, `even_of_equality`. "Odd" is stated for the integer differences `zᵢ` (`zᵢ % 2 = 1`); nothing weakened.
-- [ ] D8. From Hamming distances to a Hadamard matrix: let `Y : ι → Fin n → ℝ` be a binary motif with
+- [-] D8. From Hamming distances to a Hadamard matrix (split into D8a, D8b): let `Y : ι → Fin n → ℝ` be a binary motif with
   `Fintype.card ι = 2 * n`, `n ≥ 1`, such that for `k ≠ l` the points `Y k`, `Y l` differ in exactly `n` or
   exactly `n/2` coordinates (`2 * #{i : Y k i ≠ Y l i} = n` in the second case). Then there are a Hadamard
   matrix `H : Matrix (Fin n) (Fin n) ℤ` and a bijection `e : Fin n × Bool ≃ ι` with
@@ -176,6 +176,17 @@ Theorem 1.2 (items D4–D9) is open.
   or `−n`; "differ in all coordinates" pairs the points; non-paired points are orthogonal, and there are
   at most `n` mutually orthogonal nonzero vectors in `ℝⁿ`, so there are exactly `n` pairs).
   Probably two files; split when taken. File `StealthAudit/EqualityHadamard.lean`.
+- [x] D8a. Antipodal pairing: under the hypotheses of D8, with sign vectors `sₖ = 1 − 2Yₖ`,
+  `⟨sₖ, sₗ⟩ = n − 2 d(k, l)`; each point has exactly one antipode (a point differing from it in every
+  coordinate); at most `n` points have pairwise orthogonal sign vectors; and there is a set `R` of `n`
+  points with pairwise orthogonal sign vectors such that every point is in `R` or is the antipode of a
+  point of `R`. File `StealthAudit/EqualityPairing.lean`.
+  - Done 2026-11-25 04:10 UTC: `sgn`, `hamming`, `Antipodal`, `TwoDistance`, `sgn_mul_sgn`, `sum_sgn_mul_sgn`, `hamming_eq_iff_antipodal`, `sum_sgn_mul_sgn_eq_zero`, `antipodal_symm`, `not_antipodal_self`, `antipodal_unique`, `card_le_of_orthogonal`, `exists_antipodal_pairing`. Nothing weakened.
+- [ ] D8b. The Hadamard matrix: from D8a, index `R` by `Fin n` and let `H r i = 1 − 2 Y (rep r) i ∈ {±1}`
+  (as an integer matrix); then `IsHadamard H` (`H Hᵀ = n I` from the orthogonality of `R`) and
+  `e : Fin n × Bool ≃ ι`, `(r, false) ↦ rep r`, `(r, true) ↦` the antipode of `rep r`, is a bijection with
+  `Y (e p) = antipodalMotif H id p` for all `p`. This is the statement of D8.
+  File `StealthAudit/EqualityHadamard.lean`.
 - [ ] D9. Theorem 1.2 assembled: for `n ≥ 3`, a nonempty motif `X` with `Fintype.card ι = 2 * n` has
   `GapAtLeast X 4` if and only if there are `t : Fin n → ℝ`, a Hadamard matrix `H` of order `n`, a
   bijection `e : Fin n × Bool ≃ ι` and integers `z` with

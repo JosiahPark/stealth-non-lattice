@@ -30,6 +30,8 @@
   "D6": "unit-modulus system",
   "D7": "differences n/2, n",
   "D8": "to Hadamard matrix",
+  "D8a": "antipodal pairing",
+  "D8b": "Hadamard matrix",
   "D9": "Thm 1.2 assembled",
   "E1": "Thm 5.1 inequality",
   "E2": "Thm 5.3 binary",
@@ -91,9 +93,16 @@
   "D8": [
    "C1"
   ],
+  "D8a": [
+   "D7"
+  ],
+  "D8b": [
+   "D8a",
+   "C1"
+  ],
   "D9": [
    "D7",
-   "D8",
+   "D8b",
    "C2"
   ],
   "E1": [
@@ -160,6 +169,8 @@
     "D6",
     "D7",
     "D8",
+    "D8a",
+    "D8b",
     "D9"
    ],
    "need": [
