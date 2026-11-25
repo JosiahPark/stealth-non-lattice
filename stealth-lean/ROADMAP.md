@@ -150,11 +150,12 @@ Theorem 1.2 (items D4–D9) is open.
   `conjTranspose_mul_evalMatrix_of_orthogonal` of D1, `((N : ℂ)⁻¹ • Mᴴ) * M = 1`, and `mul_eq_one_comm`
   gives `M * ((N : ℂ)⁻¹ • Mᴴ) = 1`). File `StealthAudit/RowOrthogonality.lean`.
   - Done 2026-11-25 02:40 UTC: `evalMatrix_mul_conjTranspose_of_card_eq`, `sum_conj_phase_mul_phase_of_card_eq`. Stated as in the item, nothing weakened.
-- [ ] D5. The pivot factorization (4): for `x y : Fin n → ℝ`, `j : Fin n`, and `w i = phase (ind {i}) (y − x)`
+- [x] D5. The pivot factorization (4): for `x y : Fin n → ℝ`, `j : Fin n`, and `w i = phase (ind {i}) (y − x)`
   (that is, `e^{πi (yᵢ − xᵢ)}`), prove `phase (ind S) (y − x) = ∏ i ∈ S, w i` and
   `∑ p : Fin n × Bool, conj (phase (ind (pivotSet j p)) x) * phase (ind (pivotSet j p)) y`
   `= (1 + w j) * (1 + ∑ i ∈ univ.erase j, w i)` (`pivotSet` of D3; the sum over `p = (i, c)` splits as
   `(1 + w j) * ∑ i, (if i = j then 1 else w i)`). File `StealthAudit/PivotFactorization.lean`.
+  - Done 2026-11-25 03:05 UTC: `dot_ind`, `phase_ind_eq_prod`, `conj_phase_mul_phase_eq`, `sum_pivot_eq_mul`. Stated as in the item, with `w i` written out as `phase (ind {i}) (y − x)`.
 - [ ] D6. The unit-modulus system: let `n ≥ 3` and `w : Fin n → ℂ` with `‖w i‖ = 1` for all `i` and
   `(1 + w j) * (1 + ∑ i ∈ univ.erase j, w i) = 0` for all `j`. Then every `w i` is `1` or `−1`, and either
   all `w i = −1` or `2 * #{i : w i = 1} = n`. Proof of §4: with `W = 1 + ∑ i, w i`, each `w j` is `−1` or
