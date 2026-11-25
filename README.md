@@ -16,7 +16,7 @@ item at a time.
 
 [`stealth-lean/`](stealth-lean/) is a Lean 4 + Mathlib project that formalizes results of the paper. Proved
 there, with only Lean's standard axioms: Theorem 1.1 (including that the configurations are not translates of
-lattices), the bound `N ≥ 2n` of Theorem 1.2 and its converse, Lemma 4.1, Proposition 3.1 in gap form, the
+lattices), the bound `N ≥ 2n` of Theorem 1.2 and its converse, Lemma 4.1, Proposition 3.1, the
 inequalities of Theorem 5.1 and Corollary 5.2, and Theorem 5.3. Not proved: the equality case of Theorem 1.2,
 Theorem 1.3, Lemma 6.1 and Proposition 7.1.
 

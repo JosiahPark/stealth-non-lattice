@@ -80,13 +80,14 @@ vanish (the Fourier form of "orthogonal array of strength `t`").
   motif has strength `t`; `a_X(2eᵢ) = N`, so `4K² ≤ 4`; `K = 1` exactly for strength three, and then
   `Δ_st = 1/N`. File `StealthAudit/BinaryMotif.lean`.
   - Done 2026-11-24: `amp_of_isBinary`, `phase_of_binary`, `card_oddSupp_le_sqNorm`, `four_le_sqNorm_of_oddSupp_eq_empty`, `gapAtLeast_iff_hasStrength`, `amp_two_mul_single`, `not_gapAtLeast_five`, `gapSq_le_four`, `le_gapSq_iff_hasStrength`, `gapSq_eq_four_iff_hasStrength`, `stealthRadius_eq_one_iff`, `centerDensity_of_hasStrength_three`. The two displayed formulas of Proposition 3.1 with `min {4, d⊥}` are not stated as single equations (item B2).
-- [ ] B2. Proposition 3.1 as displayed. Define the dual distance
+- [x] B2. Proposition 3.1 as displayed. Define the dual distance
   `dualDist X : ℕ∞ = ⨅ S ∈ {S : S.Nonempty ∧ charSum X S ≠ 0}, (S.card : ℕ∞)` (so `⊤` if no character sum
   survives) and prove, for a nonempty binary motif in dimension `n ≥ 1`:
   `(gapSq X : ℕ∞) = min 4 (dualDist X)` (from `le_gapSq_iff_hasStrength` and `gapSq_le_four` of B1, with
   `HasStrength X t ↔ (t : ℕ∞) < dualDist X`), hence `stealthRadius X = √(min 4 d⊥) / 2` and
   `centerDensity X ^ 2 = (min 4 d⊥ / 4) ^ n / N ^ 2` (the square of the second formula; the paper's form
   with exponent `n/2` as a `Real.rpow` is optional). File `StealthAudit/DualDistance.lean`.
+  - Done 2026-11-25 01:40 UTC: `dualDist`, `hasStrength_iff_lt_dualDist`, `gapSq_eq_min_four_dualDist`, `gapSq_eq_toNat_min_four_dualDist`, `stealthRadius_eq_min_four_dualDist`, `centerDensity_sq_eq_min_four_dualDist`, `centerDensity_eq_min_four_dualDist` (the `n/2` real-power form, via `centerDensityQ_one` of A3). `d⊥` is defined through character sums; no code or dual code is defined.
 - [x] B3. Marginals: for a binary motif and a set `T` of coordinates,
   `2^{|T|} · #{x ∈ X : x = 0 on T} = ∑_{S ⊆ T} charSum X S`; hence strength `t ≤ n` forces `2^t ∣ N`
   (for `t = 3`: "uniformity on any three coordinates forces `8 ∣ |C|`"), and for strength three with
