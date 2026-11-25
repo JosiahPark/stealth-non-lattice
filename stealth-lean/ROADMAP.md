@@ -218,8 +218,7 @@ Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
 
 ## F. Local optimality of the marked configuration
 
-§6: Lemma 6.1 and Theorem 1.3. Lemma 6.1 is proved (F1–F3c); Theorem 1.3 is proved except its last
-sentence, the isolation clause for `n = 12`, `N = 24` (F5a done, F5b open).
+§6: Lemma 6.1 and Theorem 1.3, both proved (F1–F5b), Theorem 1.3 in the marked period model of A3.
 
 - [x] F1. The sign lemma inside Lemma 6.1: let `n ≥ 4` and let `E : Matrix (Fin n) (Fin n) ℝ` be
   symmetric with trace `0` and `E ≠ 0`. Then there is `v` in
@@ -267,11 +266,12 @@ sentence, the isolation clause for `n = 12`, `N = 24` (F5a done, F5b open).
   `X ∈ U` and period shape `Q` (symmetric positive definite, `det Q = 1`, `frobSq (Q − 1) < δ`) have
   `centerDensityQ X Q ≤ 1/N`, strictly when `Q ≠ 1`. File `StealthAudit/Theorem13.lean`.
   - Done 2026-11-25 07:55 UTC: `centerDensityQ_le_of_gapQ_le`, `centerDensityQ_lt_of_gapQ_lt`, `centerDensityQ_one_of_strength_three`, `theorem_1_3`. The period shape enters as `Q` of A3 (the derivation of (3) from a matrix `B` is a remark there); points are counted with multiplicity, so "distinct rows" is not assumed. The isolation clause is F5b.
-- [ ] F5b. The last sentence of Theorem 1.3: for `n = 12`, `N = 24`, the equality case is locally isolated
+- [x] F5b. The last sentence of Theorem 1.3: for `n = 12`, `N = 24`, the equality case is locally isolated
   modulo translations, similarities and point relabelling. State precisely: there is a neighbourhood `U` of
   `C` such that every `X ∈ U` with `centerDensityQ X 1 = 1/24` is a common translate of `C` up to relabelling
   and shifts by `2ℤ¹²` (from E3 / D9: such `X` is a translated antipodal Hadamard array; the finitely many
   labelled antipodal arrays near `C` are translates of `C`). File `StealthAudit/Theorem13Isolation.lean`.
+  - Done 2026-11-25 08:15 UTC: `int_diff_of_isBinary`, `eq_translate_of_close`, `theorem_1_3_isolation`. Proved in a stronger form: near `C` and near `Q = 1`, `Δ_st = 1/24` forces `Q = 1` and `X = C + t` with the same labelling (D7 makes the differences integers, which near `C` must equal those of `C`); no relabelling or `2ℤ¹²` shift is needed.
 
 ## G. Formal duality and numerical comparisons
 
