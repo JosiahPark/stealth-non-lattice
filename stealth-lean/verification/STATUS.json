@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 04:10 UTC",
-  "commit": "062dc39da01da252897e23b17d0ff47636c6b691",
+  "checked_at": "2026-11-25 04:14 UTC",
+  "commit": "a7791a91c7ed55e53111bfad793b393f6d1a7ddf",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 255,
-  "verified": 255,
+  "theorems": 258,
+  "verified": 258,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -2421,6 +2421,36 @@
     {
       "file": "StealthAudit/Theorem13.lean",
       "theorem": "Stealth.theorem_1_3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/Theorem13Isolation.lean",
+      "theorem": "Stealth.int_diff_of_isBinary",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/Theorem13Isolation.lean",
+      "theorem": "Stealth.eq_translate_of_close",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/Theorem13Isolation.lean",
+      "theorem": "Stealth.theorem_1_3_isolation",
       "axioms": [
         "propext",
         "Classical.choice",
