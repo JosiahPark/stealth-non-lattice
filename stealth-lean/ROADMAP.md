@@ -242,10 +242,11 @@ Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
   `‖F‖² = ∑ᵢⱼ Fᵢⱼ²` (`frobSq`): `tr F ≥ 0`, and `tr F ≤ 2 ‖F‖²` when `‖F‖² ≤ 1/4` (eigenvalues `λᵢ`,
   `∑ log λᵢ = 0`, `log λ ≤ λ − 1`, `1 − 1/λ ≤ log λ`). File `StealthAudit/DetOneTrace.lean`.
   - Done 2026-11-25 06:30 UTC: `frobSq`, `trace_mul_self_eq_sum_sq`, `frobSq_eq_trace_mul_self`, `trace_sub_one_eq`, `frobSq_sub_one_eq`, `sum_log_eigenvalues_eq_zero`, `trace_sub_one_nonneg`, `trace_sub_one_le_two_frobSq`. Nothing weakened.
-- [ ] F3b. The constant `c_n`: for `n ≥ 4` there is `c > 0` such that every real symmetric trace-free `E`
+- [x] F3b. The constant `c_n`: for `n ≥ 4` there is `c > 0` such that every real symmetric trace-free `E`
   has a test vector `v` (F1) with `quadForm E v ≤ −c · √(frobSq E)` (F1 on the compact unit sphere
   `{E symmetric, tr E = 0, frobSq E = 1}`, the minimum over the finitely many test vectors being continuous
   and negative there; homogeneity). File `StealthAudit/TraceFreeConstant.lean`.
+  - Done 2026-11-25 06:55 UTC: `testFinset`, `mem_testFinset`, `testFinset_nonempty`, `quadForm_smul`, `frobSq_smul`, `entry_sq_le_frobSq`, `frobSq_pos`, `continuous_quadForm_left`, `exists_trace_free_constant`. Nothing weakened.
 - [ ] F3c. Lemma 6.1 assembled: every test vector has `quadForm 1 v = 4`; there is `δ > 0` such that every
   real symmetric positive definite `Q` with `det Q = 1` and `0 < frobSq (Q − 1) < δ` has a test vector
   with `quadForm Q v < 4` (write `Q = 1 + F`, `F = E + (tr F / n) 1`; `quadForm Q v = 4 + quadForm E v +
