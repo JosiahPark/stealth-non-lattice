@@ -281,11 +281,12 @@ Theorem 1.2 is proved for `n ≥ 3` (D4–D9, `theorem_1_2` in D9).
   `(1/24)/(1/(2·3^{5/2})) = 3^{5/2}/12`, `(1/24)/(1/27) = 9/8`; `1/(16√3)`, `1/(2·3^{5/2})`, `1/27`,
   `5/128`, `9/256` are all below `1/24`. File `StealthAudit/Comparisons.lean`.
   - Done 2026-11-24: `three_rpow_five_halves`, `ratio_dim_ten`, `ratio_dim_eleven`, `ratio_dim_twelve`, `lt_dim_ten`, `lt_dim_eleven`, `lt_dim_twelve`, `cohn_table_lt`. The six lattice and packing values are inputs, not derived.
-- [ ] G2. The unit-density radii of the table: with `r n = 2 * (24 : ℝ) ^ (-(1 / (n : ℝ)))`, prove
+- [x] G2. The unit-density radii of the table: with `r n = 2 * (24 : ℝ) ^ (-(1 / (n : ℝ)))`, prove
   `1.455488 < r 10 < 1.455489`, `1.498153 < r 11 < 1.498154`, `1.534660 < r 12 < 1.534661` (each bound
   `a < 2 · 24^{-1/n}` is `(a / 2) ^ n * 24 < 1`, a rational inequality for `norm_num`, through
   `Real.rpow_natCast` and monotonicity of `x ↦ x ^ n`), and `r n = 2 * (centerDensity X) ^ (1 / (n : ℝ))`
   for the motif of `theorem_1_1`. File `StealthAudit/UnitDensityRadius.lean`.
+  - Done 2026-11-25 08:35 UTC: `unitRadius`, `unitRadius_pos`, `unitRadius_pow`, `lt_unitRadius_iff`, `unitRadius_lt_iff`, `unitRadius_ten`, `unitRadius_eleven`, `unitRadius_twelve`, `unitRadius_eq_centerDensity`. Nothing weakened.
 - [x] G3. The arithmetic of Proposition 7.1: for a binary motif `a_X(2u) = N` for every `u ∈ ℤⁿ`;
   `24 ∤ 2ⁿ`; `2ⁿ/24` is not an integer. File `StealthAudit/FormalDualityArithmetic.lean`.
   - Done 2026-11-24: `amp_two_mul`, `not_twentyfour_dvd_two_pow`, `two_pow_div_twentyfour_not_int`. Proposition 7.1 itself is not proved (see "Not attempted here").
