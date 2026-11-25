@@ -8,8 +8,7 @@
   "E": "§5",
   "F": "§6",
   "G": "§7",
-  "H": "§7 · Prop. 7.1",
-  "I": "§7 · Prop. 7.1 (ii) only"
+  "H": "§7 · Prop. 7.1"
  },
  "short": {
   "A1": "phase algebra",
@@ -58,12 +57,7 @@
   "H4a": "index = |det|",
   "H4b": "coset counting",
   "H4c": "density integer",
-  "H5": "Prop 7.1",
-  "I1": "binary Parseval",
-  "I2": "finite binary duality",
-  "I3": "change of marked period",
-  "I4": "cubic normal form",
-  "I5": "Prop 7.1 from (ii)"
+  "H5": "Prop 7.1"
  },
  "deps": {
   "A2": [
@@ -205,24 +199,6 @@
    "H4c",
    "G3",
    "C5"
-  ],
-  "I1": [
-   "B3"
-  ],
-  "I2": [
-   "I1"
-  ],
-  "I3": [
-   "H1"
-  ],
-  "I4": [
-   "H4c",
-   "I3"
-  ],
-  "I5": [
-   "I2",
-   "I4",
-   "H3"
   ]
  },
  "decision": [],
@@ -365,12 +341,7 @@
     "H4a",
     "H4b",
     "H4c",
-    "H5",
-    "I1",
-    "I2",
-    "I3",
-    "I4",
-    "I5"
+    "H5"
    ],
    "need": [
     "H5"
