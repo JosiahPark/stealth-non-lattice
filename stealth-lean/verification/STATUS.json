@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 04:59 UTC",
-  "commit": "0761d75b10021801af1c980e3481c618249d10fd",
+  "checked_at": "2026-11-25 05:06 UTC",
+  "commit": "76629e1ea902a98d629f90171055df7396ee0873",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 290,
-  "verified": 290,
+  "theorems": 294,
+  "verified": 294,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -821,6 +821,46 @@
     {
       "file": "StealthAudit/Comparisons.lean",
       "theorem": "Stealth.cohn_table_lt",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/CosetCounting.lean",
+      "theorem": "Stealth.mem_twoZ",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/CosetCounting.lean",
+      "theorem": "Stealth.card_fiber",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/CosetCounting.lean",
+      "theorem": "Stealth.relIndex_dvd_card",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/CosetCounting.lean",
+      "theorem": "Stealth.two_pow_mul_card_eq",
       "axioms": [
         "propext",
         "Classical.choice",
