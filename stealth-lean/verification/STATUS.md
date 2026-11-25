@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 01:30 UTC at commit `ffd9bd5996fb`.
+Checked 2026-11-25 02:27 UTC at commit `ae2a1b5192f4`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 188 of 188
+- Theorems verified with standard axioms only: 190 of 190
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -171,6 +171,8 @@ Checked 2026-11-25 01:30 UTC at commit `ffd9bd5996fb`.
 | StealthAudit/RankPrinciple.lean | `Stealth.conjTranspose_mul_evalMatrix_of_orthogonal` | verified (standard axioms only) |
 | StealthAudit/RankPrinciple.lean | `Stealth.card_le_card_of_orthogonal` | verified (standard axioms only) |
 | StealthAudit/RankPrinciple.lean | `Stealth.card_le_card_of_gapAtLeast` | verified (standard axioms only) |
+| StealthAudit/RowOrthogonality.lean | `Stealth.evalMatrix_mul_conjTranspose_of_card_eq` | verified (standard axioms only) |
+| StealthAudit/RowOrthogonality.lean | `Stealth.sum_conj_phase_mul_phase_of_card_eq` | verified (standard axioms only) |
 | StealthAudit/StealthRadius.lean | `Stealth.sqNorm_eq_zero_iff` | verified (standard axioms only) |
 | StealthAudit/StealthRadius.lean | `Stealth.sqNorm_pos` | verified (standard axioms only) |
 | StealthAudit/StealthRadius.lean | `Stealth.exists_survives` | verified (standard axioms only) |

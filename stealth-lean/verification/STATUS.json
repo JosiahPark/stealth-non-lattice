@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 01:30 UTC",
-  "commit": "ffd9bd5996fb6e8eb250f851a2913d2dbcb666d0",
+  "checked_at": "2026-11-25 02:27 UTC",
+  "commit": "ae2a1b5192f4263d72c65f929b65f1ac71dfc532",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 188,
-  "verified": 188,
+  "theorems": 190,
+  "verified": 190,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -1601,6 +1601,26 @@
     {
       "file": "StealthAudit/RankPrinciple.lean",
       "theorem": "Stealth.card_le_card_of_gapAtLeast",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/RowOrthogonality.lean",
+      "theorem": "Stealth.evalMatrix_mul_conjTranspose_of_card_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/RowOrthogonality.lean",
+      "theorem": "Stealth.sum_conj_phase_mul_phase_of_card_eq",
       "axioms": [
         "propext",
         "Classical.choice",
