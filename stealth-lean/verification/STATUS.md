@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 03:43 UTC at commit `c216d73cc5c2`.
+Checked 2026-11-25 03:46 UTC at commit `72c1ff8ab551`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 218 of 218
+- Theorems verified with standard axioms only: 221 of 221
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -65,6 +65,9 @@ Checked 2026-11-25 03:43 UTC at commit `c216d73cc5c2`.
 | StealthAudit/BoundedComplexity.lean | `Stealth.centerDensity_le_of_card_lt` | verified (standard axioms only) |
 | StealthAudit/BoundedComplexity.lean | `Stealth.centerDensity_eq_iff_of_card_lt` | verified (standard axioms only) |
 | StealthAudit/BoundedComplexity.lean | `Stealth.centerDensity_le_dim_twelve` | verified (standard axioms only) |
+| StealthAudit/BoundedComplexityEquality.lean | `Stealth.card_of_isAntipodalHadamard` | verified (standard axioms only) |
+| StealthAudit/BoundedComplexityEquality.lean | `Stealth.centerDensity_eq_iff_antipodalHadamard` | verified (standard axioms only) |
+| StealthAudit/BoundedComplexityEquality.lean | `Stealth.centerDensity_eq_iff_antipodalHadamard_dim_twelve` | verified (standard axioms only) |
 | StealthAudit/CardinalityBound.lean | `Stealth.card_sdiff_add_card_sdiff_le` | verified (standard axioms only) |
 | StealthAudit/CardinalityBound.lean | `Stealth.card_sdiff_add_card_sdiff_le_three` | verified (standard axioms only) |
 | StealthAudit/CardinalityBound.lean | `Stealth.erase_pivotSet` | verified (standard axioms only) |

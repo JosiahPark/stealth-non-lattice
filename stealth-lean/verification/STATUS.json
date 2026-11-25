@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 03:43 UTC",
-  "commit": "c216d73cc5c22fd16ff4cde3c2538bb6e644cd7e",
+  "checked_at": "2026-11-25 03:46 UTC",
+  "commit": "72c1ff8ab55196e321e41a9e7e047a4a59c5b6fa",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 218,
-  "verified": 218,
+  "theorems": 221,
+  "verified": 221,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -542,6 +542,36 @@
     {
       "file": "StealthAudit/BoundedComplexity.lean",
       "theorem": "Stealth.centerDensity_le_dim_twelve",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/BoundedComplexityEquality.lean",
+      "theorem": "Stealth.card_of_isAntipodalHadamard",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/BoundedComplexityEquality.lean",
+      "theorem": "Stealth.centerDensity_eq_iff_antipodalHadamard",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/BoundedComplexityEquality.lean",
+      "theorem": "Stealth.centerDensity_eq_iff_antipodalHadamard_dim_twelve",
       "axioms": [
         "propext",
         "Classical.choice",
