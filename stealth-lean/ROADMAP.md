@@ -156,11 +156,12 @@ Theorem 1.2 (items D4–D9) is open.
   `= (1 + w j) * (1 + ∑ i ∈ univ.erase j, w i)` (`pivotSet` of D3; the sum over `p = (i, c)` splits as
   `(1 + w j) * ∑ i, (if i = j then 1 else w i)`). File `StealthAudit/PivotFactorization.lean`.
   - Done 2026-11-25 03:05 UTC: `dot_ind`, `phase_ind_eq_prod`, `conj_phase_mul_phase_eq`, `sum_pivot_eq_mul`. Stated as in the item, with `w i` written out as `phase (ind {i}) (y − x)`.
-- [ ] D6. The unit-modulus system: let `n ≥ 3` and `w : Fin n → ℂ` with `‖w i‖ = 1` for all `i` and
+- [x] D6. The unit-modulus system: let `n ≥ 3` and `w : Fin n → ℂ` with `‖w i‖ = 1` for all `i` and
   `(1 + w j) * (1 + ∑ i ∈ univ.erase j, w i) = 0` for all `j`. Then every `w i` is `1` or `−1`, and either
   all `w i = −1` or `2 * #{i : w i = 1} = n`. Proof of §4: with `W = 1 + ∑ i, w i`, each `w j` is `−1` or
   `W`; if `r ≥ 1` of them equal `a = W ≠ −1`, then `(r − 1) a = n − r − 1`; `r = 1` forces `n = 2`; so `a`
   is real of modulus one, hence `a = 1` and `2r = n`. File `StealthAudit/UnitRootSystem.lean`.
+  - Done 2026-11-25 03:25 UTC: `eq_neg_one_or_eq_of_unit_system`, `unit_system`. Stated as in the item, nothing weakened.
 - [ ] D7. Differences in the equality case: if `GapAtLeast X 4`, `Fintype.card ι = 2 * n` and `n ≥ 3`, then
   for `k ≠ l` every coordinate difference `X l i − X k i` is an integer, and the number of `i` for which it
   is odd is `n` or `n/2` (D4 with `κ = Fin n × Bool`, `b = ind ∘ pivotSet j`, for every `j`; D5; D6;
