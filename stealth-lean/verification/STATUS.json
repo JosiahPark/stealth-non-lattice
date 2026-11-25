@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-25 03:28 UTC",
-  "commit": "f2d7e2b952ff176ccc408050b0c8b6798ab5c71c",
+  "checked_at": "2026-11-25 03:38 UTC",
+  "commit": "16cb74e1cb8ba4ee307aa02f2714d8613f5652c4",
   "all_verified": true,
   "build_ok": true,
   "lean_exit_code": 0,
-  "theorems": 212,
-  "verified": 212,
+  "theorems": 215,
+  "verified": 215,
   "problems": [],
   "skipped_private": [],
   "escape_hatches": [],
@@ -911,6 +911,36 @@
     {
       "file": "StealthAudit/EqualityDifferences.lean",
       "theorem": "Stealth.even_of_equality",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityHadamard.lean",
+      "theorem": "Stealth.signRow_cast",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityHadamard.lean",
+      "theorem": "Stealth.isHadamard_signRow",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "verified (standard axioms only)"
+    },
+    {
+      "file": "StealthAudit/EqualityHadamard.lean",
+      "theorem": "Stealth.equality_hadamard",
       "axioms": [
         "propext",
         "Classical.choice",

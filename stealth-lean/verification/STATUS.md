@@ -1,9 +1,9 @@
 # Lean verification status: PASS
 
-Checked 2026-11-25 03:28 UTC at commit `f2d7e2b952ff`.
+Checked 2026-11-25 03:38 UTC at commit `16cb74e1cb8b`.
 
 - Build: ok
-- Theorems verified with standard axioms only: 212 of 212
+- Theorems verified with standard axioms only: 215 of 215
 - A theorem listed here is a result of the paper only where ROADMAP.md says so; ROADMAP.md also
   lists the results of the paper that are not proved.
 
@@ -102,6 +102,9 @@ Checked 2026-11-25 03:28 UTC at commit `f2d7e2b952ff`.
 | StealthAudit/EqualityDifferences.lean | `Stealth.equality_differences` | verified (standard axioms only) |
 | StealthAudit/EqualityDifferences.lean | `Stealth.distinctModPeriod_of_equality` | verified (standard axioms only) |
 | StealthAudit/EqualityDifferences.lean | `Stealth.even_of_equality` | verified (standard axioms only) |
+| StealthAudit/EqualityHadamard.lean | `Stealth.signRow_cast` | verified (standard axioms only) |
+| StealthAudit/EqualityHadamard.lean | `Stealth.isHadamard_signRow` | verified (standard axioms only) |
+| StealthAudit/EqualityHadamard.lean | `Stealth.equality_hadamard` | verified (standard axioms only) |
 | StealthAudit/EqualityPairing.lean | `Stealth.sgn_mul_sgn` | verified (standard axioms only) |
 | StealthAudit/EqualityPairing.lean | `Stealth.sum_sgn_mul_sgn` | verified (standard axioms only) |
 | StealthAudit/EqualityPairing.lean | `Stealth.hamming_eq_iff_antipodal` | verified (standard axioms only) |
