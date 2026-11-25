@@ -349,10 +349,11 @@ radius). Proposition 7.1 counts as proved only for that definition, and READMEs 
   `H = B ℤⁿ` and `r k = 2 (w k − w 0)`; then `density Q = M / |det A| = 2ⁿ M / |det B| = c` by H4a.
   File `StealthAudit/PeriodicDensity.lean`.
   - Done 2026-11-25 05:10 UTC: `PeriodicConfig.lat_single`, `PeriodicConfig.density_eq_nat`. Stated as in the item, nothing weakened. With H4a and H4b this completes H4.
-- [ ] H5. Proposition 7.1. Prove `proposition_7_1 : IsBinary X → Fintype.card ι = 24 → ¬ FormallyDual X Q`
+- [x] H5. Proposition 7.1. Prove `proposition_7_1 : IsBinary X → Fintype.card ι = 24 → ¬ FormallyDual X Q`
   for every `n`, because (i) would give `density Q = 2ⁿ/24`, which is not an integer
   (`two_pow_div_twentyfour_not_int`, G3; H3; H4). Add the corollary for the motifs `C_n` of `theorem_1_1`,
   `n = 10, 11, 12`. File `StealthAudit/Proposition71.lean`.
+  - Done 2026-11-25 05:16 UTC: `card_mul_density_of_formallyDual`, `card_dvd_two_pow_of_formallyDual`, `proposition_7_1` (stated with `Q` explicit: `IsBinary X → Fintype.card ι = 24 → ∀ Q, ¬ FormallyDual X Q`), `proposition_7_1_paley`. This is Proposition 7.1 for the pair-coefficient definition of formal duality of H2, with no other hypothesis; the equivalence with the analytic definition of [3] is not formalized.
 
 ## Not attempted here
 
