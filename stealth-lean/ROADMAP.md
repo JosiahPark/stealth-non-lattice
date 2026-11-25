@@ -56,7 +56,7 @@ center density (1).
   `K ≥ 1 ↔ GapAtLeast X 4` and `K > 1 ↔ GapAtLeast X 5`; `Δ_st = Kⁿ / N` for the period `2ℤⁿ`;
   translation invariance of `K` and `Δ_st`. File `StealthAudit/StealthRadius.lean`.
   - Done 2026-11-24: `exists_survives`, `exists_survives_sqNorm_eq_gapSq`, `gapSq_le_of_survives`, `gapAtLeast_iff_le_gapSq`, `gapSq_pos`, `four_mul_stealthRadius_sq`, `one_le_stealthRadius_iff`, `one_lt_stealthRadius_iff`, `centerDensity_eq`, `gapSq_translate`, `stealthRadius_translate`, `centerDensity_translate`. The file also restates D3 with `stealthRadius`: `two_mul_le_card_of_one_le_stealthRadius`, `rank_obstruction_of_one_lt_stealthRadius`.
-- [ ] A3. General marked period, formula (3). For a real symmetric positive definite `Q` (`Matrix (Fin n)
+- [x] A3. General marked period, formula (3). For a real symmetric positive definite `Q` (`Matrix (Fin n)
   (Fin n) ℝ`) define `quadForm Q u = ∑ i j, u i * Q i j * u j` for `u : Fin n → ℤ` and
   `gapQ X Q = ⨅ {quadForm Q u : u ≠ 0, amp X u ≠ 0}` (as an infimum in `ℝ` over the set of values; show it
   is attained when `Q` is positive definite, `n ≥ 1` and `ι` is nonempty, using `exists_survives` and that
@@ -66,6 +66,7 @@ center density (1).
   `N / (2ⁿ |det B|)`) is a statement about the linear image `B (X + 2ℤⁿ)` and its dual lattice; state it as
   a docstring remark, not as a theorem, unless the dual-lattice side is also defined.
   File `StealthAudit/PeriodShape.lean`.
+  - Done 2026-11-25: `quadFormR`, `quadForm`, `gapQ`, `centerDensityQ`; `quadFormR_smul`, `quadFormR_pos`, `exists_coercive`, `exists_survives_isMin`, `isLeast_gapQ`, `exists_survives_quadForm_eq_gapQ`, `gapQ_le_of_survives`, `gapQ_pos`, `quadForm_one`, `gapQ_one`, `centerDensityQ_one`. The derivation of (3) from a period matrix `B` is a docstring remark only.
 
 ## B. Binary motifs and orthogonal arrays
 
